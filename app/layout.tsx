@@ -12,6 +12,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Manan Gandhi",
   description: "Manan Gandhi",
+  icons: {
+    icon: "/manangandhi.png",
+  },
 };
 
 export default function RootLayout({
