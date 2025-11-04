@@ -12,12 +12,12 @@
   --color-accent: var(--accent);
 }
 
-/* Global typography: next/font writes --font-geist-mono into the document
+/* Global typography: next/font writes --font-mono into the document
    via the class added in `app/layout.tsx`. Use that variable here. */
 body {
   background: var(--bg-900);
   color: var(--fg-100);
-  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
 }
 
 /* Network background layer */
@@ -272,7 +272,7 @@ body {
 
 /* Programmer-y terminal block style */
 .terminal {
-  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));
   border: 1px solid rgba(0, 180, 255, 0.06);
   color: var(--fg-100);

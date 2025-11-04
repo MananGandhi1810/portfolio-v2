@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
 import NetworkBackground from "../components/NetworkBackground";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const monoFont = Space_Mono({
   subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
   {/* default to dark mode (monochrome) - use only the mono font for a programmer-y theme */}
-  <body className={`dark ${geistMono.variable} antialiased`}>
+  <body className={`dark ${monoFont.variable} antialiased`}>
         <NetworkBackground />
         <div className="relative z-10 min-h-screen">
           <SiteHeader />

@@ -12,11 +12,11 @@ type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card>
+    <Card className="h-full flex flex-col">
       <h3 className="text-lg font-semibold text-zinc-50">{project.title}</h3>
-      <p className="mt-2 text-sm text-zinc-300 wrap-break-word">{project.description}</p>
+      <p className="mt-2 text-sm text-zinc-300 wrap-break-word grow">{project.description}</p>
 
-      <div className="mt-3 flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-zinc-400 gap-3">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-zinc-400 gap-3">
         <div className="flex flex-wrap gap-2 max-w-full">
           {project.tech?.map((t) => (
             <Badge key={t}>{t}</Badge>
