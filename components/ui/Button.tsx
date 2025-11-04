@@ -1,23 +1,35 @@
 import Link from "next/link";
 
 type ButtonProps = React.ComponentPropsWithoutRef<"button"> &
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-    href?: string;
-    className?: string;
-  };
+    React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+        href?: string;
+        className?: string;
+    };
 
-export default function Button({ children, href, className = "", ...props }: ButtonProps) {
-  if (href) {
+export default function Button({
+    children,
+    href,
+    className = "",
+    ...props
+}: ButtonProps) {
+    if (href) {
+        return (
+            <Link
+                href={href}
+                className={`btn-primary micro-anim focus-accent ${className}`}
+                {...(props as any)}
+            >
+                {children}
+            </Link>
+        );
+    }
+
     return (
-      <Link href={href} className={`btn-primary micro-anim focus-accent ${className}`} {...(props as any)}>
-        {children}
-      </Link>
+        <button
+            className={`btn-primary micro-anim focus-accent ${className}`}
+            {...props}
+        >
+            {children}
+        </button>
     );
-  }
-
-  return (
-    <button className={`btn-primary micro-anim focus-accent ${className}`} {...props}>
-      {children}
-    </button>
-  );
 }
