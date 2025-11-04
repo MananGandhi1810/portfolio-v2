@@ -17,7 +17,7 @@ export default function Home() {
               </div>
               <div>
                 <h1 className="text-4xl font-bold text-zinc-50">Hi, I&apos;m Manan Gandhi</h1>
-                <p className="text-sm text-zinc-400">19 · Computer Engineering · NMIMS MPSTME</p>
+                <p className="text-sm text-zinc-400">19 · Backend Developer · FOSS Enthusiast</p>
               </div>
             </div>
 
