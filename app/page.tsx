@@ -16,7 +16,7 @@ export default function Home() {
                 <Image src="/manangandhi.png" alt="Manan Gandhi" width={80} height={80} className="object-cover" />
               </div>
               <div>
-                <h1 className="text-4xl font-bold text-zinc-50">Hi — I&apos;m Manan Gandhi</h1>
+                <h1 className="text-4xl font-bold text-zinc-50">Hi, I&apos;m Manan Gandhi</h1>
                 <p className="text-sm text-zinc-400">19 · Computer Engineering · NMIMS MPSTME</p>
               </div>
             </div>

@@ -10,8 +10,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manan Gandhi — Portfolio",
-  description: "Portfolio of Manan Gandhi — student, developer, FOSS enthusiast",
+  title: "Manan Gandhi",
+  description: "Manan Gandhi",
 };
 
 export default function RootLayout({
