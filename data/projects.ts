@@ -14,6 +14,12 @@ export const projects = [
         live: "https://ontrack.gdscmpstme.com/",
     },
     {
+        title: "Save Birds Admin Dashboard",
+        description:
+            "Admin dashboard for the Save Birds NGO, allowing for easy management and monitoring of bird rescue and rehabilitation efforts.",
+        tech: ["React.js", "Express.js", "MySQL", "Docker", "Oracle Cloud Infrastructure", "Shadcn/UI", "Redis", "Prisma ORM"],
+    },
+    {
         title: "LeetCode Clone",
         description:
             "A platform to practice logic-based programming questions. Supports multiple languages (Python, Java, C, C++).",
