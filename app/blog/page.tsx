@@ -1,8 +1,5 @@
 export default function BlogPage() {
-  const posts = [
-    { slug: "first-post", title: "Getting started with building things", date: "2025-11-01" },
-    { slug: "learning-react-2025", title: "Practical React patterns in 2025", date: "2025-10-10" },
-  ];
+  const posts: { slug: string; title: string; date: string }[] = [];
 
   return (
     <main className="mx-auto my-12 max-w-4xl px-6">
@@ -10,6 +7,9 @@ export default function BlogPage() {
       <p className="mt-2 text-zinc-300">Short posts about projects, dev, and learning.</p>
 
       <ul className="mt-8 space-y-4">
+        {posts.length === 0 && (
+          <li className="text-zinc-400">Posts coming soon</li>
+        )}
         {posts.map((p) => (
           <li key={p.slug} className="rounded-md border border-white/6 bg-black/40 p-4">
             <a href={`/blog/${p.slug}`} className="text-lg font-semibold text-zinc-50">

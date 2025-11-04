@@ -26,13 +26,6 @@ export default function SiteHeader() {
         </div>
 
         <nav className="flex items-center gap-2 sm:gap-4 text-sm text-zinc-300 shrink-0">
-          {/* Navigation links - hidden on mobile, visible on sm and up */}
-          <div className="hidden sm:flex items-center gap-2 sm:gap-4">
-            <Button href="/projects" className="px-3 py-2">Projects</Button>
-            <Button href="/blog" className="px-3 py-2">Blog</Button>
-            <Button href="/about" className="px-3 py-2">About</Button>
-          </div>
-
           {/* Social links - responsive sizing */}
           <div className="ml-2 sm:ml-4 flex items-center gap-2 sm:gap-3">
             <a
@@ -64,10 +57,9 @@ export default function SiteHeader() {
             </a>
           </div>
 
-          {/* Hamburger menu - visible only on mobile */}
           <button
             onClick={toggleMenu}
-            className="sm:hidden ml-2 p-2 social-button"
+            className="p-2 social-button"
             aria-label="Toggle menu"
             aria-expanded={isOpen}
           >
@@ -76,9 +68,9 @@ export default function SiteHeader() {
         </nav>
       </div>
 
-      {/* Mobile menu - shown when hamburger is clicked */}
+      {/* Menu - shown when hamburger is clicked */}
       {isOpen && (
-        <div className="sm:hidden border-t border-white/6 bg-black/60 backdrop-blur-sm">
+        <div className="border-white/6 backdrop-blur-sm">
           <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
             <Link
               href="/projects"

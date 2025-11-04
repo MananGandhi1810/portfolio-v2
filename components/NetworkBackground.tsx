@@ -1,7 +1,7 @@
 export default function NetworkBackground() {
   return (
     <div aria-hidden className="network-bg">
-      <svg className="w-full h-full" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <svg className="w-full h-full" style={{ display: 'block' }} preserveAspectRatio="xMidYMid slice" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="g1" x1="0%" x2="100%">
             <stop offset="0%" stopColor="#ffffff" stopOpacity="0.06" />
