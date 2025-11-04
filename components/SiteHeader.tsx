@@ -70,7 +70,7 @@ export default function SiteHeader() {
 
       {/* Menu - shown when hamburger is clicked */}
       {isOpen && (
-        <div className="border-white/6 backdrop-blur-sm">
+        <div>
           <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
             <Link
               href="/projects"
