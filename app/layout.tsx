@@ -3,7 +3,6 @@ import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
 import NetworkBackground from "../components/NetworkBackground";
-import Head from "next/head";
 import Footer from "@/components/Footer";
 import EasterEgg from "@/components/EasterEgg";
 

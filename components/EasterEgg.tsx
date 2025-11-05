@@ -21,10 +21,7 @@ export default function EasterEgg() {
         let konamiIndex = 0;
 
         const handleKeyDown = (e: KeyboardEvent) => {
-            const key =
-                e.key === " " ? " " : e.code || e.key.toLowerCase();
-            
-            console.log(key); // For debugging purposes
+            const key = e.key === " " ? " " : e.code || e.key.toLowerCase();
 
             if (key === konamiCode[konamiIndex]) {
                 konamiIndex++;
