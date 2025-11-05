@@ -1,10 +1,20 @@
 export const projects = [
     {
-        title: "SKVJUM: A Community App",
+        title: "LeetCode Clone",
         description:
-            "A community app for the members of Shree Khambhat Vishashrimali Jain Upnagar Mandal.",
-        tech: ["Flutter", "Flask", "MongoDB", "AWS", "Google Play Store"],
-        live: "https://play.google.com/store/apps/details?id=com.skvjum.skvjum_app",
+            "A platform to practice logic-based programming questions. Supports multiple languages (Python, Java, C, C++).",
+        tech: [
+            "Express.js",
+            "React.js",
+            "PostgreSQL",
+            "Redis",
+            "Docker",
+            "Prisma ORM",
+            "Shadcn/UI",
+            "Azure",
+        ],
+        live: "https://code.manangandhi.tech/",
+        repo: "https://github.com/MananGandhi1810",
     },
     {
         title: "MPSTME OnTrack",
@@ -27,23 +37,6 @@ export const projects = [
             "Redis",
             "Prisma ORM",
         ],
-    },
-    {
-        title: "LeetCode Clone",
-        description:
-            "A platform to practice logic-based programming questions. Supports multiple languages (Python, Java, C, C++).",
-        tech: [
-            "Express.js",
-            "React.js",
-            "PostgreSQL",
-            "Redis",
-            "Docker",
-            "Prisma ORM",
-            "Shadcn/UI",
-            "Azure",
-        ],
-        live: "https://code.manangandhi.tech/",
-        repo: "https://github.com/MananGandhi1810",
     },
     {
         title: "Chess",
@@ -109,6 +102,13 @@ export const projects = [
             "Docker",
         ],
         repo: "https://github.com/MananGandhi1810/Vichaar-Manthan-SIH-2024",
+    },
+    {
+        title: "SKVJUM: A Community App",
+        description:
+            "A community app for the members of Shree Khambhat Vishashrimali Jain Upnagar Mandal.",
+        tech: ["Flutter", "Flask", "MongoDB", "AWS", "Google Play Store"],
+        live: "https://play.google.com/store/apps/details?id=com.skvjum.skvjum_app",
     },
     {
         title: "BrainyBox",
