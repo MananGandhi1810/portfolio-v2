@@ -78,24 +78,24 @@ export default function SiteHeader() {
             {/* Menu - shown when hamburger is clicked */}
             {isOpen && (
                 <div>
-                    <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-2">
+                    <div className="mx-auto max-w-6xl px-4 py-3 flex justify-center flex-col sm:flex-row gap-2">
                         <Link
                             href="/projects"
-                            className="block px-3 py-2 rounded-md hover:bg-white/5 transition-colors text-zinc-300 hover:text-zinc-100"
+                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
                             onClick={closeMenu}
                         >
                             Projects
                         </Link>
                         <Link
                             href="/blog"
-                            className="block px-3 py-2 rounded-md hover:bg-white/5 transition-colors text-zinc-300 hover:text-zinc-100"
+                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
                             onClick={closeMenu}
                         >
                             Blog
                         </Link>
                         <Link
                             href="/about"
-                            className="block px-3 py-2 rounded-md hover:bg-white/5 transition-colors text-zinc-300 hover:text-zinc-100"
+                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
                             onClick={closeMenu}
                         >
                             About

@@ -17,7 +17,16 @@ export const projects = [
         title: "Save Birds Admin Dashboard",
         description:
             "Admin dashboard for the Save Birds NGO, allowing for easy management and monitoring of bird rescue and rehabilitation efforts.",
-        tech: ["React.js", "Express.js", "MySQL", "Docker", "Oracle Cloud Infrastructure", "Shadcn/UI", "Redis", "Prisma ORM"],
+        tech: [
+            "React.js",
+            "Express.js",
+            "MySQL",
+            "Docker",
+            "Oracle Cloud Infrastructure",
+            "Shadcn/UI",
+            "Redis",
+            "Prisma ORM",
+        ],
     },
     {
         title: "LeetCode Clone",

@@ -18,7 +18,7 @@ export default function AboutPage() {
                         className="text-zinc-200"
                         href="https://github.com/MananGandhi1810"
                     >
-                    MananGandhi1810
+                        MananGandhi1810
                     </a>
                 </li>
                 <li>

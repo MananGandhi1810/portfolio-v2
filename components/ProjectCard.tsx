@@ -22,7 +22,11 @@ export default function ProjectCard({ project }: { project: Project }) {
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-zinc-400 gap-3">
                 <div className="flex flex-wrap gap-2 max-w-full">
-                    {project.tech?.map((t) => <Badge key={t} className="border-white/30">{t}</Badge>)}
+                    {project.tech?.map((t) => (
+                        <Badge key={t} className="border-white/30">
+                            {t}
+                        </Badge>
+                    ))}
                 </div>
 
                 <div className="flex gap-3 shrink-0">

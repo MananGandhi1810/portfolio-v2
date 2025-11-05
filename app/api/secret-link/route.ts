@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
         if (receivedCode !== expectedCode) {
             return NextResponse.json(
                 { error: "Unauthorized" },
-                { status: 403 }
+                { status: 403 },
             );
         }
 
@@ -24,13 +24,16 @@ export async function POST(request: NextRequest) {
         if (!url) {
             return NextResponse.json(
                 { error: "Not configured" },
-                { status: 404 }
+                { status: 404 },
             );
         }
 
         const allowedPrefix = "https://wa.me/";
         if (!url.startsWith(allowedPrefix)) {
-            return NextResponse.json({ error: "Invalid link" }, { status: 400 });
+            return NextResponse.json(
+                { error: "Invalid link" },
+                { status: 400 },
+            );
         }
 
         return NextResponse.json({ url });
@@ -38,7 +41,7 @@ export async function POST(request: NextRequest) {
         console.error("Secret link error:", err);
         return NextResponse.json(
             { error: "Internal server error" },
-            { status: 500 }
+            { status: 500 },
         );
     }
 }
