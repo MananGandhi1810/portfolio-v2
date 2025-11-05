@@ -30,7 +30,7 @@ export default function EasterEgg() {
                 konamiIndex++;
 
                 if (konamiIndex === konamiCode.length) {
-                    redirect(process.env.SECRET_LINK || "/");
+                    redirect(process.env.NEXT_PUBLIC_SECRET_LINK || "/");
                     konamiIndex = 0;
                 }
             } else {
