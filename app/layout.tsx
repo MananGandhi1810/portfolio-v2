@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <link rel="icon" href="/manangandhi.png" />
+            </head>
             <body className={`dark ${monoFont.variable} antialiased`}>
                 <NetworkBackground />
                 <div className="relative z-10 min-h-screen">
