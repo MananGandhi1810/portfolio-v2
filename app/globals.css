@@ -222,8 +222,7 @@ body {
     justify-content: center;
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     transition:
         transform 160ms ease,
         background 160ms ease;
@@ -237,7 +236,6 @@ body {
 /* subtle accent on social buttons */
 .social-button:hover {
     background: rgba(0, 180, 255, 0.04);
-    border-color: rgba(0, 180, 255, 0.08);
 }
 
 /* header larger style */
