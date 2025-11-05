@@ -4,6 +4,7 @@ import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
 import NetworkBackground from "../components/NetworkBackground";
 import Head from "next/head";
+import Footer from "@/components/Footer";
 
 const monoFont = Space_Mono({
     subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
                 <div className="relative z-10 min-h-screen">
                     <SiteHeader />
                     {children}
+                    <Footer />
                 </div>
             </body>
         </html>
