@@ -4,12 +4,13 @@ import ProjectCard from "../components/ProjectCard";
 import Button from "../components/ui/Button";
 import Badge from "../components/ui/Badge";
 import { projects } from "../data/projects";
+import Card from "@/components/ui/Card";
 
 export default function Home() {
     return (
         <main className="mx-auto my-12 max-w-5xl px-6">
-            <section className="rounded-md border border-white/6 p-8 fade-in-up card-elevated">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <Card className="rounded-md border border-white/6 p-8 fade-in-up card-elevated">
+                <div className="flex flex-col gap-4 sm:items-center sm:justify-between">
                     <div>
                         <div className="flex items-center gap-4">
                             <div className="w-20 h-20 rounded-full overflow-hidden ring-1 ring-white/6">
@@ -31,7 +32,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <p className="mt-3 text-zinc-300 max-w-2xl">
+                        <p className="mt-3 text-zinc-300">
                             I&apos;m a 19-year-old computer engineering student
                             at NMIMS MPSTME. I like to code and build projects.
                             I&apos;m into app dev, backend, frontend,
@@ -51,7 +52,7 @@ export default function Home() {
                         <GitHubContrib username="MananGandhi1810" />
                     </div>
                 </div>
-            </section>
+            </Card>
 
             <section className="mt-8">
                 <div className="flex items-center justify-between">

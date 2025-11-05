@@ -7,7 +7,7 @@ export default function GitHubContrib({
     const src = `https://ghchart.rshah.org/${username}`;
 
     return (
-        <div className="mt-6 w-full max-w-xl">
+        <div className="mt-6 w-full">
             <a
                 href={`https://github.com/${username}`}
                 target="_blank"

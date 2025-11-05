@@ -147,7 +147,7 @@ body {
 }
 
 .micro-anim {
-    transition:
+    transition: 
         transform 180ms cubic-bezier(0.2, 0.9, 0.2, 1),
         box-shadow 160ms ease,
         opacity 140ms ease;
@@ -166,7 +166,7 @@ body {
 .focus-accent:focus-visible {
     outline: 2px solid rgba(0, 180, 255, 0.12);
     box-shadow: 0 0 0 6px rgba(0, 180, 255, 0.04);
-    border-color: rgba(0, 180, 255, 0.12);
+    /* border-color: rgba(0, 180, 255, 0.12); */
 }
 
 /* Simple utility to apply the single accent color to text */
@@ -190,11 +190,11 @@ body {
         rgba(255, 255, 255, 0.06),
         rgba(255, 255, 255, 0.03)
     );
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--fg-100);
     padding: 0 1rem;
     min-height: 52px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     transition:
         transform 180ms ease,
         box-shadow 180ms ease;
@@ -213,7 +213,7 @@ body {
     box-shadow:
         0 8px 30px rgba(0, 180, 255, 0.06),
         0 2px 8px rgba(0, 180, 255, 0.04);
-    border-color: rgba(0, 180, 255, 0.12);
+    /* border-color: rgba(0, 180, 255, 0.12); */
 }
 
 .social-button {
@@ -222,7 +222,6 @@ body {
     justify-content: center;
     width: 36px;
     height: 36px;
-    border-radius: 8px;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition:
@@ -277,16 +276,10 @@ body {
 
 /* tag badge styles (filled) */
 .tag-badge {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 0.28rem 0.55rem;
     font-size: 0.75rem;
     color: #e6e6e6;
-}
-
-/* give tags a faint accent border to match the single-color theme */
-.tag-badge {
-    border: 1px solid rgba(0, 180, 255, 0.04);
 }
 
 /* avatar styles */

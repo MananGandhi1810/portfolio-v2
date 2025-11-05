@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Github, Twitter, Instagram, Menu, X } from "lucide-react";
 import { useState } from "react";
-import Button from "./ui/Button";
 
 export default function SiteHeader() {
     const [isOpen, setIsOpen] = useState(false);

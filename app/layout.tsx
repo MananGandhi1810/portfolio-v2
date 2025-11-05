@@ -3,6 +3,7 @@ import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
 import NetworkBackground from "../components/NetworkBackground";
+import Head from "next/head";
 
 const monoFont = Space_Mono({
     subsets: ["latin"],
@@ -13,9 +14,6 @@ const monoFont = Space_Mono({
 export const metadata: Metadata = {
     title: "Manan Gandhi",
     description: "Manan Gandhi",
-    icons: {
-        icon: "/manangandhi.png",
-    },
 };
 
 export default function RootLayout({
@@ -25,7 +23,6 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            {/* default to dark mode (monochrome) - use only the mono font for a programmer-y theme */}
             <body className={`dark ${monoFont.variable} antialiased`}>
                 <NetworkBackground />
                 <div className="relative z-10 min-h-screen">

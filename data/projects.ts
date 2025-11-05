@@ -32,7 +32,6 @@ export const projects = [
             "Prisma ORM",
             "Shadcn/UI",
             "Azure",
-            "Cloudflare Workers AI",
         ],
         live: "https://code.manangandhi.tech/",
         repo: "https://github.com/MananGandhi1810",
