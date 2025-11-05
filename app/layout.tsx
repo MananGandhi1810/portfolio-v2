@@ -5,6 +5,7 @@ import SiteHeader from "../components/SiteHeader";
 import NetworkBackground from "../components/NetworkBackground";
 import Head from "next/head";
 import Footer from "@/components/Footer";
+import EasterEgg from "@/components/EasterEgg";
 
 const monoFont = Space_Mono({
     subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
                     {children}
                     <Footer />
                 </div>
+                <EasterEgg />
             </body>
         </html>
     );

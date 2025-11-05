@@ -5,6 +5,7 @@ import Button from "../components/ui/Button";
 import Badge from "../components/ui/Badge";
 import { projects } from "../data/projects";
 import Card from "@/components/ui/Card";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -27,7 +28,7 @@ export default function Home() {
                                     Hi, I&apos;m Manan Gandhi
                                 </h1>
                                 <p className="text-sm text-zinc-400">
-                                    19 · Backend Developer · FOSS Enthusiast
+                                    19 · Software Developer · FOSS Enthusiast
                                 </p>
                             </div>
                         </div>
@@ -35,8 +36,13 @@ export default function Home() {
                         <p className="mt-3 text-zinc-300">
                             I&apos;m a 19-year-old computer engineering student
                             at NMIMS MPSTME. I like to code and build projects.
-                            I&apos;m into app dev, backend, frontend,
-                            cybersecurity, AI/ML and I&apos;m a FOSS enthusiast.
+                            I&apos;m into app development, backend development,
+                            cybersecurity, and AI/ML. I love participating in
+                            hackathons, and have won 5 hackathons (yet).
+                            I&apos;m a FOSS enthusiast, and I love building and
+                            contributing to open-source projects. I also enjoy
+                            finding bugs and security vulnerabilities in
+                            applications and websites.
                         </p>
 
                         <div className="mt-6 flex gap-3">
@@ -59,12 +65,26 @@ export default function Home() {
                     <h2 className="text-2xl font-semibold text-zinc-50">
                         Featured projects
                     </h2>
-                    <a
+                    <Link
                         href="/projects"
                         className="text-sm text-zinc-400 hover:text-zinc-200"
                     >
                         View all
-                    </a>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2}
+                            stroke="currentColor"
+                            className="inline-block w-4 h-4 ml-1 -mt-0.5"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+                            />
+                        </svg>
+                    </Link>
                 </div>
 
                 <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">

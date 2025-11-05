@@ -6,7 +6,7 @@ export default function Footer() {
                 href="https://manangandhi.tech"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium hover:text-white duration-200 transition"
+                className="font-medium hover:text-white duration-200 transition underline underline-offset-2"
             >
                 Manan Gandhi
             </a>
@@ -15,7 +15,7 @@ export default function Footer() {
                 href="https://github.com/MananGandhi1810/portfolio-v2"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium hover:text-white duration-200 transition"
+                className="font-medium hover:text-white duration-200 transition underline underline-offset-2"
             >
                 GitHub
             </a>
