@@ -81,6 +81,13 @@ export default function SiteHeader() {
                 <div>
                     <div className="mx-auto max-w-6xl px-4 py-3 flex justify-center flex-col sm:flex-row gap-2">
                         <Button
+                            href="/"
+                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
+                            onClick={closeMenu}
+                        >
+                            Home
+                        </Button>
+                        <Button
                             href="/projects"
                             className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
                             onClick={closeMenu}
