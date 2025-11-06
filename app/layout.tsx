@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
-import NetworkBackground from "../components/NetworkBackground";
 import Footer from "@/components/Footer";
 import EasterEgg from "@/components/EasterEgg";
 
@@ -28,7 +27,6 @@ export default function RootLayout({
                 <link rel="icon" href="/manangandhi.png" />
             </head>
             <body className={`dark ${monoFont.variable} antialiased`}>
-                <NetworkBackground />
                 <div className="relative z-10 min-h-screen">
                     <SiteHeader />
                     {children}
