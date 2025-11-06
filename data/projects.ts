@@ -174,6 +174,21 @@ export const projects = [
         repo: "https://github.com/MananGandhi1810/datathon-round-2",
     },
     {
+        title: "DockerSensei",
+        description:
+            "Docker container management system for managing and monitoring containers across servers.",
+        tech: ["Node.js", "Docker", "Next.js", "Express.js", "PostgreSQL"],
+        repo: "https://github.com/MananGandhi1810/dockersensei",
+    },
+    {
+        title: "LLM Breakout",
+        description:
+            "The classic Breakout game with a twist of Generative AI. Runner up for Most Fun Project in Supabase Launch Week 15 Hackathon.",
+        tech: ["React.js", "FastAPI", "Supabase", "Gemini 2.5 Flash"],
+        repo: "https://github.com/akshaykripalani/supahack-lw15",
+        live: "https://lw15.akshaykripalani.tech/",
+    },
+    {
         title: "AdGen",
         description:
             "Platform for competitive intelligence, market analysis and social sentiment tracking across channels. Built at Level Supermind Hackathon.",
@@ -207,22 +222,6 @@ export const projects = [
             "An app to help people discover others across domains to build projects together. Built during a 24-hour hackathon.",
         tech: ["Flutter", "Firebase"],
         repo: "https://github.com/MananGandhi1810/Verbal-Virtuosos-Debate-a-thon",
-    },
-    {
-        title: "DockerSensei",
-        description:
-            "Docker container management system for managing and monitoring containers across servers. Built during HackNiche.",
-        tech: [
-            "Node.js",
-            "Flutter",
-            "Docker",
-            "Pusher",
-            "Next.js",
-            "Express.js",
-            "PostgreSQL",
-            "Google Cloud Platform",
-        ],
-        repo: "https://github.com/rushabhhere/hackniche",
     },
     {
         title: "Stock Market Game",
