@@ -64,6 +64,12 @@ export default function Home() {
                             >
                                 Contact
                             </Button>
+                            <Button
+                                href="/resume.pdf"
+                                className="hover:underline underline-offset-2"
+                            >
+                                See My Resume
+                            </Button>
                         </div>
                     </div>
 
