@@ -48,19 +48,16 @@ export default function Home() {
                         <div className="mt-6 flex gap-3">
                             <Button
                                 href="/projects"
-                                className="hover:underline underline-offset-2"
                             >
                                 See my projects
                             </Button>
                             <Button
                                 href="/blog"
-                                className="hover:underline underline-offset-2"
                             >
                                 Read my blog
                             </Button>
                             <Button
                                 href="mailto:hello@manangandhi.tech"
-                                className="hover:underline underline-offset-2"
                             >
                                 Contact
                             </Button>

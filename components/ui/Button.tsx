@@ -16,7 +16,7 @@ export default function Button({
         return (
             <Link
                 href={href}
-                className={`btn-primary micro-anim focus-accent ${className}`}
+                className={`btn-primary micro-anim focus-accent hover:underline underline-offset-2 ${className}`}
                 {...(props as any)}
             >
                 {children}
@@ -26,7 +26,7 @@ export default function Button({
 
     return (
         <button
-            className={`btn-primary micro-anim focus-accent ${className}`}
+            className={`btn-primary micro-anim focus-accent hover:underline underline-offset-2 ${className}`}
             {...props}
         >
             {children}
