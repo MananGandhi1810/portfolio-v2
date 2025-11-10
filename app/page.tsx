@@ -46,19 +46,9 @@ export default function Home() {
                         </p>
 
                         <div className="mt-6 flex gap-3">
-                            <Button
-                                href="/projects"
-                            >
-                                See my projects
-                            </Button>
-                            <Button
-                                href="/blog"
-                            >
-                                Read my blog
-                            </Button>
-                            <Button
-                                href="mailto:hello@manangandhi.tech"
-                            >
+                            <Button href="/projects">See my projects</Button>
+                            <Button href="/blog">Read my blog</Button>
+                            <Button href="mailto:hello@manangandhi.tech">
                                 Contact
                             </Button>
                             <Button
@@ -83,7 +73,7 @@ export default function Home() {
                     </h2>
                     <Link
                         href="/projects"
-                        className="text-sm text-zinc-400 hover:text-zinc-200"
+                        className="text-sm text-zinc-400 hover:text-zinc-200 hover:underline underline-offset-2"
                     >
                         View all
                         <svg
