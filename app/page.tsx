@@ -50,7 +50,6 @@ export default function Home() {
                             <Button href="/blog">Read my blog</Button>
                             <Button
                                 href="/resume.pdf"
-                                className="hover:underline underline-offset-2"
                             >
                                 See My Resume
                             </Button>
