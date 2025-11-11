@@ -48,14 +48,14 @@ export default function Home() {
                         <div className="mt-6 flex gap-3">
                             <Button href="/projects">See my projects</Button>
                             <Button href="/blog">Read my blog</Button>
-                            <Button href="mailto:hello@manangandhi.tech">
-                                Contact
-                            </Button>
                             <Button
                                 href="/resume.pdf"
                                 className="hover:underline underline-offset-2"
                             >
                                 See My Resume
+                            </Button>
+                            <Button href="mailto:hello@manangandhi.tech">
+                                Contact Me
                             </Button>
                         </div>
                     </div>
