@@ -46,8 +46,8 @@ export default function Home() {
                         </p>
 
                         <div className="mt-6 flex gap-3">
-                            <Button href="/projects">See my projects</Button>
-                            <Button href="/blog">Read my blog</Button>
+                            <Button href="/projects">See My Projects</Button>
+                            <Button href="/blog">Read My Blog</Button>
                             <Button
                                 href="/resume.pdf"
                             >
