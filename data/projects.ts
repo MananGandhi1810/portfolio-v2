@@ -85,6 +85,7 @@ export const projects = [
             "Gemini 1.5 Flash",
             "Shadcn/UI",
         ],
+        live: "https://adeon.me/",
         repo: "https://github.com/MananGandhi1810/Adeon",
     },
     {
