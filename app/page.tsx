@@ -13,7 +13,7 @@ export default function Home() {
             <Card className="rounded-md border border-white/6 p-8 fade-in-up card-elevated">
                 <div className="flex flex-col gap-4 sm:items-center sm:justify-between">
                     <div>
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4 flex-col sm:flex-row">
                             <div className="w-20 h-20 rounded-full overflow-hidden ring-1 ring-white/6">
                                 <Image
                                     src="/manangandhi.png"
