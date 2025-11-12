@@ -45,7 +45,7 @@ export default function Home() {
                             applications and websites.
                         </p>
 
-                        <div className="mt-6 flex gap-3">
+                        <div className="mt-6 flex gap-3 flex-col sm:flex-row">
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
                             <Button
