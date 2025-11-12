@@ -5,6 +5,7 @@ import SiteHeader from "../components/SiteHeader";
 import Footer from "@/components/Footer";
 import EasterEgg from "@/components/EasterEgg";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const monoFont = Space_Mono({
     subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
                 </div>
                 <EasterEgg />
                 <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );

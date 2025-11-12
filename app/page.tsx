@@ -33,7 +33,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <p className="mt-3 text-zinc-300">
+                      <p className="mt-3 text-zinc-300">
                             I&apos;m a 19-year-old computer engineering student
                             at NMIMS MPSTME. I like to code and build projects.
                             I&apos;m into app development, backend development,
