@@ -13,8 +13,8 @@ export default function Home() {
             <Card className="rounded-sm border border-white/12 p-8 fade-in-up card-elevated">
                 <div className="flex flex-col gap-6 sm:items-start sm:justify-between">
                     <div className="w-full">
-                        <div className="flex items-start gap-6 flex-col sm:flex-row">
-                            <div className="w-20 h-20 rounded-sm overflow-hidden ring-1 ring-white/10 shrink-0">
+                        <div className="flex gap-6 flex-col sm:flex-row items-center">
+                            <div className="w-20 h-20 overflow-hidden ring-1 ring-white/10 shrink-0">
                                 <Image
                                     src="/manangandhi.png"
                                     alt="Manan Gandhi"
@@ -33,7 +33,7 @@ export default function Home() {
                             </div>
                         </div>
 
-                        <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed max-w-2xl">
+                        <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed">
                             I&apos;m a 19-year-old computer engineering student
                             at NMIMS MPSTME. I like to code and build projects.
                             I&apos;m into app development, backend development,
