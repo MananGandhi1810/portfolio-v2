@@ -13,34 +13,34 @@ type Project = {
 export default function ProjectCard({ project }: { project: Project }) {
     return (
         <Card className="h-full flex flex-col">
-            <h3 className="text-lg font-semibold text-zinc-50">
+            <h3 className="text-base sm:text-lg font-semibold text-zinc-50">
                 {project.title}
             </h3>
-            <p className="mt-2 text-sm text-zinc-300 wrap-break-word grow">
+            <p className="mt-3 text-xs sm:text-sm text-zinc-300 wrap-break-word grow leading-relaxed">
                 {project.description}
             </p>
 
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-zinc-400 gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-zinc-400 gap-3 mt-4">
                 <div className="flex flex-wrap gap-2 max-w-full">
                     {project.tech?.map((t) => (
-                        <Badge key={t} className="border-white/30">
+                        <Badge key={t} className="border-white/20">
                             {t}
                         </Badge>
                     ))}
                 </div>
 
-                <div className="flex gap-3 shrink-0">
+                <div className="flex gap-2 shrink-0">
                     {project.repo && (
                         <Button
                             href={project.repo}
                             target="_blank"
                             rel="noreferrer"
                             aria-label={`View repository for ${project.title}`}
-                            className="px-3 py-2 text-sm"
+                            className="px-3 py-2 text-xs"
                         >
                             <svg
-                                width="18"
-                                height="18"
+                                width="16"
+                                height="16"
                                 viewBox="0 0 16 16"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -61,11 +61,11 @@ export default function ProjectCard({ project }: { project: Project }) {
                             target="_blank"
                             rel="noreferrer"
                             aria-label={`Open live site for ${project.title}`}
-                            className="px-3 py-2 text-sm"
+                            className="px-3 py-2 text-xs"
                         >
                             <svg
-                                width="18"
-                                height="18"
+                                width="16"
+                                height="16"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"

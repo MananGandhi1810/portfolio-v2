@@ -1,8 +1,12 @@
 export default function AboutPage() {
     return (
         <main className="mx-auto my-12 max-w-3xl px-6">
-            <h1 className="text-3xl font-bold text-zinc-50">About</h1>
-            <p className="mt-4 text-zinc-300">
+            <div className="mb-8">
+                <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50 tracking-tight">
+                    About
+                </h1>
+            </div>
+            <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
                 I&apos;m a 19-year-old computer engineering student at NMIMS
                 MPSTME. I like to code and build projects. I&apos;m into app
                 development, backend development, cybersecurity, and AI/ML. I
@@ -11,35 +15,35 @@ export default function AboutPage() {
                 contributing to open-source projects. I also enjoy finding bugs
                 and security vulnerabilities in applications and websites.
             </p>
-            <ul className="mt-4 space-y-2 text-zinc-300">
-                <li>
-                    GitHub:{" "}
+            <div className="mt-8 space-y-2 text-sm sm:text-base">
+                <p className="text-zinc-300">
+                    <span className="text-zinc-400">GitHub:</span>{" "}
                     <a
-                        className="text-zinc-200"
+                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
                         href="https://github.com/MananGandhi1810"
                     >
                         MananGandhi1810
                     </a>
-                </li>
-                <li>
-                    X:{" "}
+                </p>
+                <p className="text-zinc-300">
+                    <span className="text-zinc-400">X:</span>{" "}
                     <a
-                        className="text-zinc-200"
+                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
                         href="https://x.com/MananGandhi1810"
                     >
                         @MananGandhi1810
                     </a>
-                </li>
-                <li>
-                    Instagram:{" "}
+                </p>
+                <p className="text-zinc-300">
+                    <span className="text-zinc-400">Instagram:</span>{" "}
                     <a
-                        className="text-zinc-200"
+                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
                         href="https://instagram.com/manan.py"
                     >
                         @manan.py
                     </a>
-                </li>
-            </ul>
+                </p>
+            </div>
         </main>
     );
 }

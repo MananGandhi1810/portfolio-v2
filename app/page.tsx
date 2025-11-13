@@ -10,11 +10,11 @@ import Link from "next/link";
 export default function Home() {
     return (
         <main className="mx-auto my-4 max-w-5xl px-6">
-            <Card className="rounded-md border border-white/6 p-8 fade-in-up card-elevated">
-                <div className="flex flex-col gap-4 sm:items-center sm:justify-between">
-                    <div>
-                        <div className="flex items-center gap-4 flex-col sm:flex-row">
-                            <div className="w-20 h-20 rounded-full overflow-hidden ring-1 ring-white/6">
+            <Card className="rounded-sm border border-white/12 p-8 fade-in-up card-elevated">
+                <div className="flex flex-col gap-6 sm:items-start sm:justify-between">
+                    <div className="w-full">
+                        <div className="flex items-start gap-6 flex-col sm:flex-row">
+                            <div className="w-20 h-20 rounded-sm overflow-hidden ring-1 ring-white/10 shrink-0">
                                 <Image
                                     src="/manangandhi.png"
                                     alt="Manan Gandhi"
@@ -24,16 +24,16 @@ export default function Home() {
                                 />
                             </div>
                             <div>
-                                <h1 className="text-4xl font-bold text-zinc-50">
+                                <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50 tracking-tight">
                                     Hi, I&apos;m Manan Gandhi
                                 </h1>
-                                <p className="text-sm text-zinc-400">
+                                <p className="text-xs sm:text-sm text-zinc-400 mt-2">
                                     19 · Software Developer · FOSS Enthusiast
                                 </p>
                             </div>
                         </div>
 
-                      <p className="mt-3 text-zinc-300">
+                        <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed max-w-2xl">
                             I&apos;m a 19-year-old computer engineering student
                             at NMIMS MPSTME. I like to code and build projects.
                             I&apos;m into app development, backend development,
@@ -45,7 +45,7 @@ export default function Home() {
                             applications and websites.
                         </p>
 
-                        <div className="mt-6 flex gap-3 flex-col sm:flex-row">
+                        <div className="mt-8 flex gap-2 flex-col sm:flex-row">
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
                             <Button
@@ -59,7 +59,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="mt-6 sm:mt-0">
+                    <div className="mt-8 sm:mt-0 w-full">
                         <GitHubContrib username="MananGandhi1810" />
                     </div>
                 </div>

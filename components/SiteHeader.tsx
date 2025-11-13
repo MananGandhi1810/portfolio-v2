@@ -17,7 +17,7 @@ export default function SiteHeader() {
     };
 
     return (
-        <header className="backdrop-blur-sm sticky top-0 z-20 w-full border-b border-white/6 bg-black/40 site-header-compact">
+        <header className="backdrop-blur-sm sticky top-0 z-20 w-full border-b border-white/8 bg-black/30 site-header-compact">
             <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6">
                 <div className="flex items-center gap-4 min-w-0">
                     <Link

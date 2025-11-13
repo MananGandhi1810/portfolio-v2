@@ -1,47 +1,48 @@
 @import "tailwindcss";
 
-/* Monochrome palette (dark-first). Single cyan/blue accent. */
+/* Minimalist palette: clean dark mode with subtle accents */
 :root {
     --bg-900: #000000;
-    --bg-800: #0a0a0a;
-    --fg-100: #f5f5f5;
-    --fg-200: #e5e5e5;
-    --muted: #9ca3af;
-    --accent: #00b4ff;
-    /* single cyan/blue "terminal" accent (non-green) */
+    --bg-800: #05050a;
+    --bg-700: #0f0f1a;
+    --fg-100: #f0f0f5;
+    --fg-200: #d0d0d8;
+    --muted: #888888;
+    --accent: #00a8ff;
+    --accent-dim: rgba(0, 168, 255, 0.1);
     --color-accent: var(--accent);
 }
 
-/* Global typography: next/font writes --font-mono into the document
-   via the class added in `app/layout.tsx`. Use that variable here. */
+/* Minimalist typography and body */
 body {
     background: var(--bg-900);
     color: var(--fg-100);
     font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
         "Roboto Mono", monospace;
+    letter-spacing: 0.3px;
 }
 
-/* Network background layer */
+/* Network background layer - very subtle */
 .network-bg {
     position: fixed;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.28;
+    opacity: 0.08;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
 .link-line {
-    stroke: rgba(200, 200, 200, 0.06);
-    stroke-width: 1;
+    stroke: rgba(200, 200, 200, 0.02);
+    stroke-width: 0.8;
     stroke-linecap: round;
 }
 
 .node {
-    fill: rgba(245, 245, 245, 0.02);
-    stroke: rgba(245, 245, 245, 0.12);
+    fill: rgba(245, 245, 245, 0.005);
+    stroke: rgba(245, 245, 245, 0.04);
 }
 
 @keyframes floaty {
@@ -95,26 +96,23 @@ body {
 }
 
 /* richer UI styles */
+/* Elevated cards - clean and minimal */
 .card-elevated {
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.02),
-        rgba(255, 255, 255, 0.01)
+        rgba(255, 255, 255, 0.01),
+        rgba(255, 255, 255, 0)
     );
-    box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.6),
-        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     transition:
-        transform 240ms ease,
-        box-shadow 240ms ease,
-        background 240ms ease;
+        transform 220ms ease,
+        box-shadow 220ms ease,
+        background 220ms ease;
 }
 
 .card-elevated:hover {
-    transform: translateY(-6px) scale(1.002);
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.7),
-        inset 0 1px 0 rgba(255, 255, 255, 0.02);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Micro-animations: subtle, fast transitions for interactive elements */
@@ -185,35 +183,23 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.06),
-        rgba(255, 255, 255, 0.03)
-    );
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
     color: var(--fg-100);
     padding: 0 1rem;
-    min-height: 52px;
-    /* border-radius: 10px; */
+    min-height: 48px;
     transition:
-        transform 180ms ease,
-        box-shadow 180ms ease;
+        all 180ms ease;
     text-align: center;
     white-space: normal;
     line-height: 1.1;
+    cursor: pointer;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
-}
-
-/* glow effect using the single accent color on interactive hover */
-.btn-primary:hover {
-    box-shadow:
-        0 8px 30px rgba(0, 180, 255, 0.06),
-        0 2px 8px rgba(0, 180, 255, 0.04);
-    /* border-color: rgba(0, 180, 255, 0.12); */
+    border-color: var(--accent);
+    background: rgba(0, 168, 255, 0.08);
+    box-shadow: 0 0 0 1px rgba(0, 168, 255, 0.2);
 }
 
 .social-button {
@@ -222,20 +208,16 @@ body {
     justify-content: center;
     width: 36px;
     height: 36px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transition:
-        transform 160ms ease,
-        background 160ms ease;
+        all 160ms ease;
+    cursor: pointer;
 }
 
 .social-button:hover {
-    transform: translateY(-1px);
-    background: rgba(255, 255, 255, 0.04);
-}
-
-/* subtle accent on social buttons */
-.social-button:hover {
-    background: rgba(0, 180, 255, 0.04);
+    border-color: var(--accent);
+    background: rgba(0, 168, 255, 0.1);
+    color: var(--accent);
 }
 
 /* header larger style */
@@ -244,7 +226,7 @@ body {
     padding-bottom: 10px;
 }
 
-/* accent underline animation */
+/* accent underline animation - refined */
 .accent-underline {
     position: relative;
     display: inline-block;
@@ -255,17 +237,12 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -6px;
-    height: 3px;
-    /* single accent color used here */
-    background: linear-gradient(
-        90deg,
-        rgba(0, 180, 255, 0.16),
-        rgba(0, 180, 255, 0.06)
-    );
+    bottom: -4px;
+    height: 2px;
+    background: var(--accent);
     transform-origin: left center;
     transform: scaleX(0);
-    transition: transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: transform 300ms ease;
 }
 
 .accent-underline:hover::after {
@@ -290,22 +267,16 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-/* Programmer-y terminal block style */
+/* Programmer-y terminal block style - refined */
 .terminal {
     font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
         "Roboto Mono", monospace;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.01),
-        rgba(255, 255, 255, 0.005)
-    );
-    border: 1px solid rgba(0, 180, 255, 0.06);
+    background: rgba(0, 168, 255, 0.05);
+    border: 1px solid rgba(0, 168, 255, 0.15);
     color: var(--fg-100);
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.01),
-        0 6px 24px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* blinking caret for terminal feel */
