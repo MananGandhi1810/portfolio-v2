@@ -45,7 +45,7 @@ export default function Home() {
                             applications and websites.
                         </p>
 
-                        <div className="mt-8 flex gap-2 flex-col sm:flex-row">
+                        <div className="mt-8 flex gap-2 flex-col sm:flex-row justify-center">
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
                             <Button
