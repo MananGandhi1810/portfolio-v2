@@ -1,5 +1,21 @@
 @import "tailwindcss";
 
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
 /* Minimalist palette: clean dark mode with subtle accents */
 :root {
     --bg-900: #000000;
