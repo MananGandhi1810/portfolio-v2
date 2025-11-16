@@ -49,7 +49,7 @@ export default function Home() {
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
                             <Button
-                                href="/resume.pdf"
+                                href="/Manan_Gandhi_Resume.pdf"
                             >
                                 See My Resume
                             </Button>
