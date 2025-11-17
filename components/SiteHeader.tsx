@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Twitter, Instagram, Menu, X } from "lucide-react";
+import { Github, Twitter, Instagram, Menu, X, Linkedin } from "lucide-react";
 import { useState } from "react";
 import Button from "./ui/Button";
 
@@ -40,6 +40,15 @@ export default function SiteHeader() {
                             aria-label="GitHub"
                         >
                             <Github className="w-4 h-4" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/manangandhi1810"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-button"
+                            aria-label="LinkedIn"
+                        >
+                            <Linkedin className="w-4 h-4" />
                         </a>
                         <a
                             href="https://x.com/MananGandhi1810"
