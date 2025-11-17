@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Home() {
     return (
         <main className="mx-auto my-4 max-w-5xl px-6">
-            <Card className="rounded-sm border border-white/12 p-8 fade-in-up card-elevated">
+            <Card className="border border-white p-8 fade-in-up card-elevated">
                 <div className="flex flex-col gap-6 sm:items-start sm:justify-between">
                     <div className="w-full">
                         <div className="flex gap-6 flex-col sm:flex-row items-center">
