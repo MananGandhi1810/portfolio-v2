@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.manangandhi.tech/</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.manangandhi.tech/about</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.manangandhi.tech/blog</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.manangandhi.tech/projects</loc>
+    <lastmod>2025-11-17</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>

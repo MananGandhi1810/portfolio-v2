@@ -3,3 +3,5 @@ Allow: /
 Allow: /about
 Allow: /blog
 Allow: /projects
+
+Sitemap: https://www.manangandhi.tech/sitemap.xml
