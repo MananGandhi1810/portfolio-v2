@@ -14,7 +14,7 @@ export const projects = [
             "Azure",
         ],
         live: "https://code.manangandhi.tech/",
-        repo: "https://github.com/MananGandhi1810",
+        repo: "https://github.com/MananGandhi1810/online-ide",
     },
     {
         title: "MPSTME OnTrack",
@@ -53,7 +53,7 @@ export const projects = [
             "Azure",
         ],
         live: "https://chess.manangandhi.tech/",
-        repo: "https://github.com/MananGandhi1810",
+        repo: "https://github.com/MananGandhi1810/online-chess",
     },
     {
         title: "FluxGate",
