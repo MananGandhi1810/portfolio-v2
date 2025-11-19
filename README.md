@@ -2,6 +2,8 @@
 
 A modern, responsive personal portfolio website built with Next.js, showcasing projects, blog posts, and professional information.
 
+![Portfolio Screenshot](./assets/screenshot.png)
+
 ## Features
 
 -   **Responsive Design**: Optimized for all device sizes
