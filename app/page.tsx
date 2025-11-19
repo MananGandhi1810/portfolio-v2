@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import GitHubContrib from "../components/GitHubContrib";
 import ProjectCard from "../components/ProjectCard";
@@ -6,8 +8,17 @@ import Badge from "../components/ui/Badge";
 import { projects } from "../data/projects";
 import Card from "@/components/ui/Card";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
+    const [copied, setCopied] = useState(false);
+
+    const handleCopy = async () => {
+        await navigator.clipboard.writeText('nc sh.manan.cloud 1810');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
     return (
         <main className="mx-auto my-4 max-w-5xl px-6">
             <Card className="border border-white p-8 fade-in-up card-elevated">
@@ -61,6 +72,24 @@ export default function Home() {
 
                     <div className="w-full">
                         <GitHubContrib username="MananGandhi1810" />
+                    </div>
+
+                    <div className="w-full mt-6 pt-6 border-t border-zinc-700 hidden sm:block">
+                        <div className="text-center">
+                            <h4 className="text-sm font-semibold text-zinc-50 mb-2">
+                                Terminal Version
+                            </h4>
+                            <p className="text-xs text-zinc-300 mb-3">
+                                Access the terminal version of this website:
+                            </p>
+                            <span
+                                className="inline-block bg-zinc-800 px-3 py-1 text-xs font-mono text-zinc-200 cursor-pointer hover:bg-zinc-700 transition-colors select-none"
+                                onClick={handleCopy}
+                                title="Click to copy command"
+                            >
+                                {copied ? 'Copied!' : '$ nc sh.manan.cloud 1810'}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </Card>
