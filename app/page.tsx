@@ -59,7 +59,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="mt-8 sm:mt-0 w-full">
+                    <div className="w-full">
                         <GitHubContrib username="MananGandhi1810" />
                     </div>
                 </div>
