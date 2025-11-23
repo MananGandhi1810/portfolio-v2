@@ -21,7 +21,7 @@ export const projects = [
         description:
             "MPSTME OnTrack helps students store their schedule and class details. Currently has 1500+ downloads on Play Store and App Store combined.",
         tech: ["Flutter", "Google Play Store", "Apple App Store"],
-        live: "https://ontrack.mpstme.tech/",
+        live: "https://ontrack.mpstme.dev/",
     },
     {
         title: "Save Birds Admin Dashboard",
