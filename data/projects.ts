@@ -89,6 +89,21 @@ export const projects = [
         repo: "https://github.com/MananGandhi1810/Adeon",
     },
     {
+        title: "MPSTME.pics",
+        description:
+            "A platform for MPSTME students to share and explore event photos.",
+        tech: [
+            "Next.js",
+            "Express.js",
+            "PostgreSQL",
+            "AWS S3",
+            "Docker",
+            "Drizzle ORM",
+        ],
+        live: "https://mpstme.pics/",
+        repo: "https://github.com/KartikJain14/mpstme.pics",
+    },
+    {
         title: "Automated Interview Platform",
         description:
             "Interview simulation platform that provides feedback and scoring to help users improve. Built for Smart India Hackathon 2024.",
