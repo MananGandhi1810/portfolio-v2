@@ -26,16 +26,17 @@ export const projects = [
     {
         title: "Save Birds Admin Dashboard",
         description:
-            "Admin dashboard for the Save Birds NGO, allowing for easy management and monitoring of bird rescue and rehabilitation efforts.",
+            "Admin dashboard for the Save Birds NGO, allowing for easy management and monitoring of bird rescue and rehabilitation efforts. Developed the app, website and backend, which supports 30+ bird cases per day in Kandivali, Mumbai.",
         tech: [
             "React.js",
             "Express.js",
             "MySQL",
             "Docker",
             "Oracle Cloud Infrastructure",
-            "Shadcn/UI",
             "Redis",
             "Prisma ORM",
+            "Flutter",
+            "OneSignal",
         ],
     },
     {
