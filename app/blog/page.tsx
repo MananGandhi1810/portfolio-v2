@@ -1,8 +1,22 @@
+import { getBlogMetadata } from "@/data/blogs";
+import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Blog",
+    description: "Short posts about projects, dev, and learning.",
+    openGraph: {
+        type: "website",
+        title: "Blog",
+        description: "Short posts about projects, dev, and learning.",
+    },
+};
+
 export default function BlogPage() {
-    const posts: { slug: string; title: string; date: string }[] = [];
+    const posts = getBlogMetadata();
 
     return (
-        <main className="mx-auto my-12 max-w-4xl px-6">
+        <main className="mx-auto my-12 max-w-5xl px-6">
             <div className="mb-8">
                 <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50 tracking-tight">
                     Blog
@@ -12,27 +26,30 @@ export default function BlogPage() {
                 </p>
             </div>
 
-            <ul className="mt-8 space-y-3">
-                {posts.length === 0 && (
-                    <li className="text-zinc-400 text-sm">Posts coming soon</li>
-                )}
-                {posts.map((p) => (
-                    <li
-                        key={p.slug}
-                        className="rounded-sm border border-white/12 bg-transparent hover:bg-white/3 transition-colors p-4"
-                    >
-                        <a
-                            href={`/blog/${p.slug}`}
-                            className="text-base sm:text-lg font-semibold text-zinc-50 hover:text-blue-400 transition-colors"
-                        >
-                            {p.title}
-                        </a>
-                        <div className="mt-2 text-xs sm:text-sm text-zinc-400">
-                            {p.date}
-                        </div>
-                    </li>
+            <div className="space-y-6">
+                {posts.map((post) => (
+                    <Link key={post.slug} href={`/blog/${post.slug}`}>
+                        <article className="group border border-zinc-700 p-4 hover:border-blue-400 transition-all duration-200 cursor-pointer">
+                            <div className="flex flex-col gap-3">
+                                <h2 className="text-lg sm:text-xl font-semibold text-zinc-50 group-hover:text-blue-400 transition-colors">
+                                    {post.title}
+                                </h2>
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-zinc-400">
+                                    <time dateTime={post.date}>
+                                        {new Date(post.date).toLocaleDateString('en-US', {
+                                            year: 'numeric',
+                                            month: 'long',
+                                            day: 'numeric',
+                                        })}
+                                    </time>
+                                    <span className="hidden sm:inline text-zinc-600">•</span>
+                                    <span>{post.author}</span>
+                                </div>
+                            </div>
+                        </article>
+                    </Link>
                 ))}
-            </ul>
+            </div>
         </main>
     );
 }
