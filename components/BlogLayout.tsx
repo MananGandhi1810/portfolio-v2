@@ -57,7 +57,7 @@ const markdownComponents = {
     },
     a({ href, children, ...props }: { href?: string; children?: ReactNode }) {
         return (
-            <a g
+            <a
                 href={href} 
                 className="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2"
                 {...props}
