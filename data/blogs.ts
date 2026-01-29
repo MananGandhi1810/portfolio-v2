@@ -5,7 +5,7 @@ export const blogs = [
         date: '2025-01-30',
         author: 'Manan Gandhi',
         content: `
-Some months ago, I came across \`$ ssh terminal.shop\`, the best way to order coffee - via the terminal. Using the SSH protocol to order coffee was a very unconventional method, but it got me thinking. How could I try to replicate this and put my portfolio over the terminal.
+Some months ago, I came across \`$ ssh terminal.shop\`, the best way to order coffee - via the terminal. Using the SSH protocol to order coffee was a very unconventional method, but it got me thinking. How could I try to replicate this and put my portfolio over the terminal?
 
 I started digging into how the SSH protocol works. It involved private keys, public keys, and key exchange in order to establish a connection over the internet. But I just wanted to create a simple method for serving my portfolio. I thought about finding a simpler to implement protocol. After a bit of research, I found out about <ins>netcat</ins> and how it can be used to establish simple TCP connections over the internet.
 
