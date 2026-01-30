@@ -37,7 +37,7 @@ const markdownComponents = {
             <div className="relative group my-4">
                 <button
                     onClick={handleCopy}
-                    className="absolute top-3 right-3 p-1.5 border border-white/20 hover:bg-zinc-700 transition-colors opacity-0 group-hover:opacity-100 z-10"
+                    className="absolute top-3 right-3 p-1.5 border border-white/20 hover:bg-zinc-700 transition-colors opacity-0 group-hover:opacity-100 z-10 hover:cursor-pointer"
                     aria-label="Copy code"
                 >
                     {copied ? (
@@ -59,7 +59,7 @@ const markdownComponents = {
         return (
             <a
                 href={href} 
-                className="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2"
+                className="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2 break-words"
                 {...props}
             >
                 {children}
