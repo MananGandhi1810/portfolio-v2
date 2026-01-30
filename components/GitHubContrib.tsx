@@ -3,7 +3,6 @@ export default function GitHubContrib({
 }: {
     username?: string;
 }) {
-    // Public service to render contribution heatmap as an image.
     const src = `https://ghchart.rshah.org/${username}`;
 
     return (
@@ -16,7 +15,7 @@ export default function GitHubContrib({
                 <img
                     src={src}
                     alt={`${username} GitHub contributions`}
-                    className="w-full rounded-md border border-white/6"
+                    className="w-full border border-white/6"
                 />
             </a>
         </div>
