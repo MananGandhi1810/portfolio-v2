@@ -1,6 +1,6 @@
 export default function AboutPage() {
     return (
-        <main className="mx-auto my-12  px-6">
+        <main className="mx-auto my-12 max-w-5xl px-6">
             <div className="mb-8">
                 <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50 tracking-tight">
                     About

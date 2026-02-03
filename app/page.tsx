@@ -4,7 +4,6 @@ import Image from "next/image";
 import GitHubContrib from "../components/GitHubContrib";
 import ProjectCard from "../components/ProjectCard";
 import Button from "../components/ui/Button";
-import Badge from "../components/ui/Badge";
 import { projects } from "../data/projects";
 import Card from "@/components/ui/Card";
 import Link from "next/link";
@@ -14,7 +13,7 @@ export default function Home() {
     const [copied, setCopied] = useState(false);
 
     const handleCopy = async () => {
-        await navigator.clipboard.writeText('nc sh.manan.cloud 1810');
+        await navigator.clipboard.writeText("nc sh.manan.cloud 1810");
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
     };
@@ -59,22 +58,14 @@ export default function Home() {
                         <div className="mt-8 flex gap-2 flex-col sm:flex-row justify-center">
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
-                            <Button
-                                href="/Manan_Gandhi_Resume.pdf"
-                            >
-                                See My Resume
-                            </Button>
-                            <Button href="mailto:hello@manangandhi.tech">
+                            <Button href="/resume">See My Resume</Button>
+                            <Button href="mailto:hello@manan.cloud">
                                 Contact Me
                             </Button>
                         </div>
                     </div>
 
-                    <div className="w-full">
-                        <GitHubContrib username="MananGandhi1810" />
-                    </div>
-
-                    <div className="w-full mt-6 pt-6 border-t border-zinc-700 hidden sm:block">
+                    <div className="w-full pt-4 border-t border-zinc-700 hidden sm:block">
                         <div className="text-center">
                             <h4 className="text-sm font-semibold text-zinc-50 mb-2">
                                 Terminal Version
@@ -87,7 +78,9 @@ export default function Home() {
                                 onClick={handleCopy}
                                 title="Click to copy command"
                             >
-                                {copied ? 'Copied!' : '$ nc sh.manan.cloud 1810'}
+                                {copied
+                                    ? "Copied!"
+                                    : "$ nc sh.manan.cloud 1810"}
                             </span>
                         </div>
                     </div>
@@ -132,6 +125,12 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
+            </section>
+
+            <section className="mt-8">
+                <Card className="border border-white p-8 pt-0">
+                    <GitHubContrib username="MananGandhi1810" />
+                </Card>
             </section>
         </main>
     );
