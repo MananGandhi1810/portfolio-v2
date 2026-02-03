@@ -1,9 +1,9 @@
 export const blogs = [
     {
-        slug: 'portfolio-over-terminal',
-        title: 'How I Serve My Portfolio Over The Terminal',
-        date: '2025-01-30',
-        author: 'Manan Gandhi',
+        slug: "portfolio-over-terminal",
+        title: "How I Serve My Portfolio Over The Terminal",
+        date: "2025-01-30",
+        author: "Manan Gandhi",
         content: `
 A few months ago, I came across \`$ ssh terminal.shop\`, the best way to order coffee - via the terminal. Using the SSH protocol to order coffee was a very unconventional method, but it got me thinking. How could I try to replicate this and put my portfolio over the terminal?
 

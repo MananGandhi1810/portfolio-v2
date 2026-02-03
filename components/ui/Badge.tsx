@@ -6,7 +6,9 @@ export default function Badge({
     className?: string;
 }) {
     return (
-        <span className={`tag-badge micro-anim ${className} border-white/20 text-xs`}>
+        <span
+            className={`tag-badge micro-anim ${className} border-white/20 text-xs`}
+        >
             {children}
         </span>
     );

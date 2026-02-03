@@ -9,7 +9,9 @@ html {
         scroll-behavior: auto;
     }
 
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
         animation-duration: 0.001ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
@@ -33,7 +35,8 @@ html {
 body {
     background: var(--bg-900);
     color: var(--fg-100);
-    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    font-family:
+        var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
         "Roboto Mono", monospace;
     letter-spacing: 0.3px;
 }
@@ -204,8 +207,7 @@ body {
     color: var(--fg-100);
     padding: 0 1rem;
     min-height: 48px;
-    transition:
-        all 180ms ease;
+    transition: all 180ms ease;
     text-align: center;
     white-space: normal;
     line-height: 1.1;
@@ -225,8 +227,7 @@ body {
     width: 36px;
     height: 36px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    transition:
-        all 160ms ease;
+    transition: all 160ms ease;
     cursor: pointer;
 }
 
@@ -285,7 +286,8 @@ body {
 
 /* Programmer-y terminal block style - refined */
 .terminal {
-    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    font-family:
+        var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
         "Roboto Mono", monospace;
     background: rgba(0, 168, 255, 0.05);
     border: 1px solid rgba(0, 168, 255, 0.15);

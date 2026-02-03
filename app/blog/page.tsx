@@ -36,13 +36,18 @@ export default function BlogPage() {
                                 </h2>
                                 <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-zinc-400">
                                     <time dateTime={post.date}>
-                                        {new Date(post.date).toLocaleDateString('en-US', {
-                                            year: 'numeric',
-                                            month: 'long',
-                                            day: 'numeric',
-                                        })}
+                                        {new Date(post.date).toLocaleDateString(
+                                            "en-US",
+                                            {
+                                                year: "numeric",
+                                                month: "long",
+                                                day: "numeric",
+                                            },
+                                        )}
                                     </time>
-                                    <span className="hidden sm:inline text-zinc-600">•</span>
+                                    <span className="hidden sm:inline text-zinc-600">
+                                        •
+                                    </span>
                                     <span>{post.author}</span>
                                 </div>
                             </div>

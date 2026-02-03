@@ -127,12 +127,12 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="fade-in-up-delayed mt-8"
-                        style={{ animationDelay: `480ms` }}>
+            <section
+                className="fade-in-up-delayed mt-8"
+                style={{ animationDelay: `480ms` }}
+            >
                 <Card className="border border-white p-8 pt-0">
-                    <div
-                        
-                    >
+                    <div>
                         <GitHubContrib username="MananGandhi1810" />
                     </div>
                 </Card>

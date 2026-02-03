@@ -6,30 +6,30 @@ A modern, responsive personal portfolio website built with Next.js, showcasing p
 
 ## Features
 
--   **Responsive Design**: Optimized for all device sizes
--   **Dark Theme**: Clean, modern dark UI with subtle animations
--   **Project Showcase**: Highlighted projects with descriptions and links
--   **Blog Section**: Space for sharing thoughts and technical articles
--   **About Page**: Personal introduction and social links
--   **Easter Egg**: Hidden interactive feature for fun
--   **Analytics**: Integrated Vercel Analytics and Speed Insights
--   **Performance Optimized**: Built with Next.js 16 for optimal loading speeds and Server Side Rendering (SSR)
+- **Responsive Design**: Optimized for all device sizes
+- **Dark Theme**: Clean, modern dark UI with subtle animations
+- **Project Showcase**: Highlighted projects with descriptions and links
+- **Blog Section**: Space for sharing thoughts and technical articles
+- **About Page**: Personal introduction and social links
+- **Easter Egg**: Hidden interactive feature for fun
+- **Analytics**: Integrated Vercel Analytics and Speed Insights
+- **Performance Optimized**: Built with Next.js 16 for optimal loading speeds and Server Side Rendering (SSR)
 
 ## Tech Stack
 
--   **Framework**: Next.js 16.0.1
--   **Language**: TypeScript
--   **Styling**: Tailwind CSS v4
--   **UI Components**: Custom components with Lucide React icons
--   **Utilities**: clsx, class-variance-authority, tailwind-merge
--   **Linting**: ESLint with Next.js configuration
--   **Analytics**: Vercel Analytics & Speed Insights
--   **Deployment**: Vercel
+- **Framework**: Next.js 16.0.1
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Custom components with Lucide React icons
+- **Utilities**: clsx, class-variance-authority, tailwind-merge
+- **Linting**: ESLint with Next.js configuration
+- **Analytics**: Vercel Analytics & Speed Insights
+- **Deployment**: Vercel
 
 ## Prerequisites
 
--   Node.js 18+
--   pnpm (recommended) or npm/yarn
+- Node.js 18+
+- pnpm (recommended) or npm/yarn
 
 ## Local Development
 
@@ -84,9 +84,9 @@ export const projects = [
 
 The project uses Tailwind CSS v4 with custom utilities. Main styles are in:
 
--   `app/globals.css` - Global styles and Tailwind imports
--   `postcss.config.mjs` - PostCSS configuration
--   `tailwind.config.js` - Tailwind configuration (if exists)
+- `app/globals.css` - Global styles and Tailwind imports
+- `postcss.config.mjs` - PostCSS configuration
+- `tailwind.config.js` - Tailwind configuration (if exists)
 
 ### Environment Variables
 

@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import { ReactNode, useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
+import { ReactNode, useState } from "react";
+import { Copy, Check } from "lucide-react";
 
 interface BlogLayoutProps {
     title: string;
@@ -13,9 +13,16 @@ interface BlogLayoutProps {
 }
 
 const markdownComponents = {
-    code({ inline, children, ...props }: { inline?: boolean; children?: ReactNode }) {
+    code({
+        inline,
+        children,
+        ...props
+    }: {
+        inline?: boolean;
+        children?: ReactNode;
+    }) {
         return (
-            <code 
+            <code
                 className="text-zinc-100 border border-white/20 font-mono px-1 text-sm"
                 {...props}
             >
@@ -25,9 +32,9 @@ const markdownComponents = {
     },
     pre({ children, ...props }: { children?: ReactNode }) {
         const [copied, setCopied] = useState(false);
-        
+
         const handleCopy = () => {
-            const codeContent = (children as any)?.props?.children || '';
+            const codeContent = (children as any)?.props?.children || "";
             navigator.clipboard.writeText(codeContent);
             setCopied(true);
             setTimeout(() => setCopied(false), 4000);
@@ -46,7 +53,7 @@ const markdownComponents = {
                         <Copy size={16} className="text-white" />
                     )}
                 </button>
-                <pre 
+                <pre
                     className="border border-white/20 rounded-none p-4 overflow-x-auto"
                     {...props}
                 >
@@ -58,7 +65,7 @@ const markdownComponents = {
     a({ href, children, ...props }: { href?: string; children?: ReactNode }) {
         return (
             <a
-                href={href} 
+                href={href}
                 className="text-blue-400 hover:text-blue-300 transition-colors underline underline-offset-2 break-words"
                 {...props}
             >
@@ -70,8 +77,10 @@ const markdownComponents = {
         return <br />;
     },
     ins({ children, ...props }: { children?: ReactNode }) {
-        return <ins className="underline underline-offset-2 px-1">{children}</ins>;
-    }
+        return (
+            <ins className="underline underline-offset-2 px-1">{children}</ins>
+        );
+    },
 };
 
 export default function BlogLayout({
@@ -102,7 +111,12 @@ export default function BlogLayout({
             </div>
 
             <div className="prose prose-invert mx-auto max-w-5xl px-6">
-                <ReactMarkdown rehypePlugins={[rehypeRaw]} components={markdownComponents}>{content}</ReactMarkdown>
+                <ReactMarkdown
+                    rehypePlugins={[rehypeRaw]}
+                    components={markdownComponents}
+                >
+                    {content}
+                </ReactMarkdown>
             </div>
 
             <div className="mx-auto max-w-5xl px-6">
@@ -118,4 +132,3 @@ export default function BlogLayout({
         </article>
     );
 }
-
