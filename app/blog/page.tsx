@@ -29,7 +29,7 @@ export default function BlogPage() {
             <div className="space-y-6">
                 {posts.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.slug}`}>
-                        <article className="group border border-zinc-800 p-4 hover:border-(--accent) transition-all duration-200 cursor-pointer">
+                        <article className="group border border-zinc-800 p-4 hover:border-(--accent) transition-all duration-200 cursor-pointer micro-anim">
                             <div className="flex flex-col gap-3">
                                 <h2 className="text-lg sm:text-xl font-semibold text-zinc-50 group-hover:underline underline-offset-1 transition-colors duration-200">
                                     {post.title}
