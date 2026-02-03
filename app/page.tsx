@@ -127,9 +127,14 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="mt-8">
+            <section className="fade-in-up-delayed mt-8"
+                        style={{ animationDelay: `480ms` }}>
                 <Card className="border border-white p-8 pt-0">
-                    <GitHubContrib username="MananGandhi1810" />
+                    <div
+                        
+                    >
+                        <GitHubContrib username="MananGandhi1810" />
+                    </div>
                 </Card>
             </section>
         </main>
