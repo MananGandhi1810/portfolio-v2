@@ -29,7 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     ))}
                 </div>
 
-                <div className="flex gap-2 shrink-0">
+                <div className="flex flex-col md:flex-row gap-2 shrink-0">
                     {project.repo && (
                         <Button
                             href={project.repo}
