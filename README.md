@@ -1,4 +1,4 @@
-# Portfolio v2
+# Portfolio Website
 
 A modern, responsive personal portfolio website built with Next.js, showcasing projects, blog posts, and professional information.
 
@@ -59,63 +59,3 @@ A modern, responsive personal portfolio website built with Next.js, showcasing p
 4. **Open your browser**
 
     Navigate to [http://localhost:3000](http://localhost:3000) to view the website.
-
-## Customization
-
-### Adding Projects
-
-Edit `data/projects.ts` to add new projects:
-
-```typescript
-export const projects = [
-    {
-        title: "Your Project",
-        description: "Project description",
-        tech: ["Tech1", "Tech2"],
-        github: "https://github.com/...",
-        demo: "https://...",
-        featured: true,
-    },
-    // ... more projects
-];
-```
-
-### Styling
-
-The project uses Tailwind CSS v4 with custom utilities. Main styles are in:
-
-- `app/globals.css` - Global styles and Tailwind imports
-- `postcss.config.mjs` - PostCSS configuration
-- `tailwind.config.js` - Tailwind configuration (if exists)
-
-### Environment Variables
-
-Create a `.env.local` file for environment variables:
-
-```env
-EASTER_EGG_CODE="RandomSecretCode123"
-SECRET_LINK="https://www.example.com/secret"
-```
-
-## Deployment
-
-The built application can be deployed to any static hosting service:
-
-```bash
-pnpm build
-pnpm start
-```
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
