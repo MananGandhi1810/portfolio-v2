@@ -58,7 +58,7 @@ export default function Home() {
                         <div className="mt-8 flex gap-2 flex-col sm:flex-row justify-center">
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
-                            <Button href="/resume">See My Resume</Button>
+                            <Button href="/resume" target="_blank">See My Resume</Button>
                             <Button href="mailto:hello@manan.cloud">
                                 Contact Me
                             </Button>
