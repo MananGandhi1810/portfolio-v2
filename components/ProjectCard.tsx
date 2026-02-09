@@ -21,7 +21,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             </p>
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-zinc-400 gap-3 mt-4">
-                <div className="flex flex-wrap gap-2 max-w-full">
+                <div className="flex flex-wrap sm:justify-start justify-center gap-2 max-w-full">
                     {project.tech?.map((t) => (
                         <Badge key={t} className="border-white/20">
                             {t}
