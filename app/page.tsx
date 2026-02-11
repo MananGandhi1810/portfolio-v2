@@ -24,13 +24,13 @@ export default function Home() {
                 <div className="flex flex-col gap-6 sm:items-start sm:justify-between">
                     <div className="w-full">
                         <div className="flex gap-6 flex-col sm:flex-row items-center">
-                            <div className="w-full sm:w-20 h-auto sm:h-20 overflow-hidden ring-1 ring-white/10 sm:shrink-0">
+                            <div className="w-full sm:w-20 aspect-square overflow-hidden ring-1 ring-white/10 sm:shrink-0">
                                 <Image
                                     src="/manangandhi.png"
                                     alt="Manan Gandhi"
                                     width={80}
                                     height={80}
-                                    className="object-cover w-full h-auto"
+                                    className="object-cover w-full h-full"
                                 />
                             </div>
                             <div className="w-full sm:w-auto">
