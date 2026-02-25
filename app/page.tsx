@@ -132,7 +132,7 @@ export default function Home() {
                 style={{ animationDelay: `480ms` }}
             >
                 <Card className="border border-white p-8 pt-0">
-                    <div>
+                    <div className="">
                         <GitHubContrib username="MananGandhi1810" />
                     </div>
                 </Card>
