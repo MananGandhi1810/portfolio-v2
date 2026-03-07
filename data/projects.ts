@@ -128,6 +128,13 @@ export const projects = [
         live: "https://play.google.com/store/apps/details?id=com.skvjum.skvjum_app",
     },
     {
+        title: "OpenQuant",
+        description:
+            "An open source data dashboard with AI-powered insights, visualizations, strategy backtesting and more for the stock market. Winner of FOSS Club MPSTME CodeForge 2026 Hackathon.",
+        tech: ["FastAPI", "Next.js", "Docker", "SQLite", "Redis", "OpenRouter"],
+        repo: "https://github.com/Neurotechh/CodeForge",
+    },
+    {
         title: "BrainyBox",
         description:
             "An edutainment platform that helps students learn concepts in an interactive way. 1st runner up at IET Hack n Code, MPSTME.",

@@ -48,7 +48,7 @@ export default function Home() {
                             at NMIMS MPSTME. I like to code and build projects.
                             I&apos;m into app development, backend development,
                             cybersecurity, and AI/ML. I love participating in
-                            hackathons, and have won 5 hackathons (yet).
+                            hackathons, and have won 6 hackathons (yet).
                             I&apos;m a FOSS enthusiast, and I love building and
                             contributing to open-source projects. I also enjoy
                             finding bugs and security vulnerabilities in
