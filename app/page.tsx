@@ -44,12 +44,12 @@ export default function Home() {
                         </div>
 
                         <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed">
-                            I&apos;m a 19-year-old computer engineering student
+                            I'm a 19-year-old computer engineering student
                             at NMIMS MPSTME. I like to code and build projects.
-                            I&apos;m into app development, backend development,
+                            I'm into app development, backend development,
                             cybersecurity, and AI/ML. I love participating in
                             hackathons, and have won 6 hackathons (yet).
-                            I&apos;m a FOSS enthusiast, and I love building and
+                            I'm a FOSS enthusiast, and I love building and
                             contributing to open-source projects. I also enjoy
                             finding bugs and security vulnerabilities in
                             applications and websites.
@@ -58,7 +58,9 @@ export default function Home() {
                         <div className="mt-8 flex gap-2 flex-col sm:flex-row justify-center">
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
-                            <Button href="/resume" target="_blank">See My Resume</Button>
+                            <Button href="/resume" target="_blank">
+                                See My Resume
+                            </Button>
                             <Button href="mailto:hello@manan.cloud">
                                 Contact Me
                             </Button>
