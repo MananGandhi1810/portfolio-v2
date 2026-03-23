@@ -38,24 +38,30 @@ export default function Home() {
                                     Hi, I&apos;m Manan Gandhi
                                 </h1>
                                 <p className="text-xs sm:text-sm text-zinc-400 mt-2">
-                                    19 · Software Developer · FOSS Enthusiast
+                                    19 · Mid Frequency Trading Intern @ IkiQuant
+                                    Technologies · FOSS Enthusiast
                                 </p>
                             </div>
                         </div>
 
                         <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed">
-                            I'm a 19-year-old computer engineering student
-                            at NMIMS MPSTME. I like to code and build projects.
-                            I'm into app development, backend development,
-                            cybersecurity, and AI/ML. I love participating in
-                            hackathons, and have won 6 hackathons (yet).
-                            I'm a FOSS enthusiast, and I love building and
-                            contributing to open-source projects. I also enjoy
-                            finding bugs and security vulnerabilities in
-                            applications and websites.
+                            I'm a 19-year-old computer engineering student at
+                            NMIMS MPSTME. I like to code and build projects. I'm
+                            experienced in App Development, Backend Development,
+                            Cybersecurity, and AI/ML. I am currently working as
+                            a Mid Frequency Trading Intern at IkiQuant
+                            Technologies. I love participating in hackathons,
+                            and have won 6 hackathons (yet). I'm a FOSS
+                            enthusiast, and I love building and contributing to
+                            open-source projects. I also enjoy finding bugs and
+                            security vulnerabilities in applications and
+                            websites.
                         </p>
 
                         <div className="mt-8 flex gap-2 flex-col sm:flex-row justify-center">
+                            <Button href="/experience">
+                                My Work Experience
+                            </Button>
                             <Button href="/projects">See My Projects</Button>
                             <Button href="/blog">Read My Blog</Button>
                             <Button href="/resume" target="_blank">
