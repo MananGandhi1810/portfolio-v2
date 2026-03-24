@@ -41,6 +41,14 @@ body {
     letter-spacing: 0.3px;
 }
 
+@media (pointer: fine) {
+    html,
+    body,
+    body * {
+        cursor: none !important;
+    }
+}
+
 /* Network background layer - very subtle */
 .network-bg {
     position: fixed;
