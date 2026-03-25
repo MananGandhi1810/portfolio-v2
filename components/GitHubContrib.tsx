@@ -28,7 +28,7 @@ export default function GitHubContrib({
         const fetchContributions = async () => {
             try {
                 const response = await fetch(
-                    `https://github-contributions-api.jogruber.de/v4/${username}?y=last`
+                    `https://github-contributions-api.jogruber.de/v4/${username}?y=last`,
                 );
                 const data: GitHubContribResponse = await response.json();
                 setContributions(data.contributions);
@@ -44,7 +44,8 @@ export default function GitHubContrib({
 
     useEffect(() => {
         if (scrollContainerRef.current) {
-            scrollContainerRef.current.scrollLeft = scrollContainerRef.current.scrollWidth;
+            scrollContainerRef.current.scrollLeft =
+                scrollContainerRef.current.scrollWidth;
         }
     }, [contributions]);
 
@@ -68,14 +69,14 @@ export default function GitHubContrib({
     if (loading) {
         return (
             <div className="mt-6 w-full animate-pulse flex flex-col gap-2">
-                 <div className="h-[100px] w-full bg-neutral-800/50 rounded-lg"></div>
+                <div className="h-[100px] w-full bg-neutral-800/50 rounded-lg"></div>
             </div>
         );
     }
 
     const weeks: Contribution[][] = [];
     let currentWeek: Contribution[] = [];
-    
+
     contributions.forEach((day, i) => {
         currentWeek.push(day);
         if (currentWeek.length === 7 || i === contributions.length - 1) {
@@ -103,7 +104,7 @@ export default function GitHubContrib({
                                     <div
                                         key={day.date}
                                         className={`w-2.5 h-2.5 rounded-sm ${getLevelColor(
-                                            day.level
+                                            day.level,
                                         )} shrink-0`}
                                         title={`${day.date}: ${day.count} contributions`}
                                     />

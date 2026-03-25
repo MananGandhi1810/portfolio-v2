@@ -7,13 +7,13 @@ export default function AboutPage() {
                 </h1>
             </div>
             <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
-                I'm a 19-year-old computer engineering student at NMIMS
-                MPSTME. I like to code and build projects. I'm into app
-                development, backend development, cybersecurity, and AI/ML. I
-                love participating in hackathons, and have won 6 hackathons
-                (yet). I'm a FOSS enthusiast, and I love building and
-                contributing to open-source projects. I also enjoy finding bugs
-                and security vulnerabilities in applications and websites.
+                I'm a 19-year-old computer engineering student at NMIMS MPSTME.
+                I like to code and build projects. I'm into app development,
+                backend development, cybersecurity, and AI/ML. I love
+                participating in hackathons, and have won 6 hackathons (yet).
+                I'm a FOSS enthusiast, and I love building and contributing to
+                open-source projects. I also enjoy finding bugs and security
+                vulnerabilities in applications and websites.
             </p>
             <div className="mt-8 space-y-2 text-sm sm:text-base">
                 <p className="text-zinc-300">
