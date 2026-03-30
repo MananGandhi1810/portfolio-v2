@@ -8,12 +8,13 @@ export default function AboutPage() {
             </div>
             <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
                 I'm a 19-year-old computer engineering student at NMIMS MPSTME.
-                I like to code and build projects. I'm into app development,
-                backend development, cybersecurity, and AI/ML. I love
-                participating in hackathons, and have won 6 hackathons (yet).
-                I'm a FOSS enthusiast, and I love building and contributing to
-                open-source projects. I also enjoy finding bugs and security
-                vulnerabilities in applications and websites.
+                I like to code and build projects. I'm experienced in App
+                Development, Backend Development, Cybersecurity, and AI/ML. I am
+                currently working as a Mid Frequency Trading Intern at IkiQuant
+                Technologies. I love participating in hackathons, and have won 6
+                hackathons (yet). I'm a FOSS enthusiast, and I love building and
+                contributing to open-source projects. I also enjoy finding bugs
+                and security vulnerabilities in applications and websites.
             </p>
             <div className="mt-8 space-y-2 text-sm sm:text-base">
                 <p className="text-zinc-300">
@@ -41,6 +42,24 @@ export default function AboutPage() {
                         href="https://instagram.com/manan.py"
                     >
                         @manan.py
+                    </a>
+                </p>
+                <p className="text-zinc-300">
+                    <span className="text-zinc-400">LinkedIn:</span>{" "}
+                    <a
+                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
+                        href="https://linkedin.com/in/manangandhi1810"
+                    >
+                        Manan Gandhi
+                    </a>
+                </p>
+                <p className="text-zinc-300">
+                    <span className="text-zinc-400">Email:</span>{" "}
+                    <a
+                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
+                        href="mailto:hello@manan.cloud"
+                    >
+                        hello@manan.cloud
                     </a>
                 </p>
             </div>
