@@ -15,8 +15,8 @@ export default function MouseFollowerDot() {
         let visible = false;
 
         const updatePosition = (event: MouseEvent) => {
-            dot.style.left = `${event.clientX - 16}px`;
-            dot.style.top = `${event.clientY - 16}px`;
+            dot.style.left = `${event.clientX - 20}px`;
+            dot.style.top = `${event.clientY - 20}px`;
 
             if (!visible) {
                 dot.style.opacity = "1";
@@ -42,7 +42,7 @@ export default function MouseFollowerDot() {
         <div
             ref={dotRef}
             aria-hidden="true"
-            className="pointer-events-none fixed left-0 top-0 z-100 h-10 w-10 rounded-full bg-(--accent) mix-blend-difference opacity-0 transition-opacity duration-75"
+            className="pointer-events-none fixed left-0 top-0 z-100 h-10 w-10 rounded-full bg-(--accent) mix-blend-difference opacity-0 transition-opacity duration-500"
         />
     );
 }
