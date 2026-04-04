@@ -51,7 +51,7 @@ export default function Home() {
                             Cybersecurity, and AI/ML. I am currently working as
                             a Mid Frequency Trading Intern at IkiQuant
                             Technologies. I love participating in hackathons,
-                            and have won 6 hackathons (yet). I'm a FOSS
+                            and have won 7 hackathons (yet). I'm a FOSS
                             enthusiast, and I love building and contributing to
                             open-source projects. I also enjoy finding bugs and
                             security vulnerabilities in applications and

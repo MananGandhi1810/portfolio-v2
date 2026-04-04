@@ -135,6 +135,13 @@ export const projects = [
         repo: "https://github.com/Neurotechh/CodeForge",
     },
     {
+        title: "FormBar",
+        description:
+            "An open source Google Forms/Tally.so alternative with AI-powered form generation, realtime collaboration and WhatsApp-based form filling options. Runner up at ACM MPSTME ReCode 2026 Hackathon.",
+        tech: ["FastAPI", "Next.js", "Docker", "PostgreSQL", "Redis", "MongoDB", "Gemini 3.0 Flash"],
+        repo: "https://github.com/MananGandhi1810/FormBar",
+    },
+    {
         title: "BrainyBox",
         description:
             "An edutainment platform that helps students learn concepts in an interactive way. 1st runner up at IET Hack n Code, MPSTME.",

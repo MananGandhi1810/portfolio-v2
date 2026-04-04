@@ -11,7 +11,7 @@ export default function AboutPage() {
                 I like to code and build projects. I'm experienced in App
                 Development, Backend Development, Cybersecurity, and AI/ML. I am
                 currently working as a Mid Frequency Trading Intern at IkiQuant
-                Technologies. I love participating in hackathons, and have won 6
+                Technologies. I love participating in hackathons, and have won 7
                 hackathons (yet). I'm a FOSS enthusiast, and I love building and
                 contributing to open-source projects. I also enjoy finding bugs
                 and security vulnerabilities in applications and websites.
