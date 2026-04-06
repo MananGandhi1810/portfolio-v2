@@ -67,7 +67,7 @@ export default function Home() {
                             <Button href="/resume" target="_blank">
                                 See My Resume
                             </Button>
-                            <Button href="mailto:hello@manan.cloud">
+                            <Button href="/contact">
                                 Contact Me
                             </Button>
                         </div>

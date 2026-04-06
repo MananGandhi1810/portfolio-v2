@@ -125,6 +125,13 @@ export default function SiteHeader() {
                             About
                         </Button>
                         <Button
+                            href="/contact"
+                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
+                            onClick={closeMenu}
+                        >
+                            Contact
+                        </Button>
+                        <Button
                             target="_blank"
                             href="/Manan_Gandhi_Resume.pdf"
                             className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
