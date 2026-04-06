@@ -24,7 +24,7 @@ ${message}
         `.trim();
 
         const result = await resend.emails.send({
-            from: process.env.RESEND_FROM_EMAIL,
+            from: process.env.RESEND_FROM_EMAIL!,
             to: "website-contact@manan.cloud",
             replyTo: email,
             subject: `Portfolio Contact: ${subject} from ${name}`,

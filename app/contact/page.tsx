@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Textarea";
+import Button from "@/components/ui/Button";
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -79,6 +80,7 @@ export default function ContactPage() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
+                        className="rounded-none"
                         required
                         placeholder="Your name"
                     />
@@ -97,6 +99,7 @@ export default function ContactPage() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        className="rounded-none"
                         required
                         placeholder="your@email.com"
                     />
@@ -115,6 +118,7 @@ export default function ContactPage() {
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
+                        className="rounded-none"
                         required
                         placeholder="What is this about?"
                     />
@@ -132,20 +136,21 @@ export default function ContactPage() {
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
+                        className="rounded-none"
                         required
                         rows={6}
                         placeholder="Your message here..."
                     />
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                    <button
+                <div className="flex flex-col gap-4 items-start sm:items-center">
+                    <Button
                         type="submit"
                         disabled={isLoading}
-                        className="px-6 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 text-white rounded transition-colors font-medium"
+                        className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
                     >
                         {isLoading ? "Sending..." : "Send Message"}
-                    </button>
+                    </Button>
 
                     {submitStatus === "success" && (
                         <p className="text-sm text-green-400">
