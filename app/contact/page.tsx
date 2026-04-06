@@ -153,7 +153,7 @@ export default function ContactPage() {
                     </Button>
 
                     {submitStatus === "success" && (
-                        <p className="text-sm text-green-400">
+                        <p className="text-sm text-blue-400">
                             Message sent successfully! I'll get back to you soon.
                         </p>
                     )}
