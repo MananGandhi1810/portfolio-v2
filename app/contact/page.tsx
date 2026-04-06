@@ -171,7 +171,7 @@ export default function ContactPage() {
                             href="mailto:manangandhi1810@gmail.com"
                             className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
                         >
-                            manangandhi1810@gmail.com
+                            hello@manan.cloud
                         </a>
                     </p>
                     <p className="text-zinc-300">
