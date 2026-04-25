@@ -1,4 +1,44 @@
+import SocialsCard, { type SocialLink } from "@/components/SocialsCard";
+
 export default function AboutPage() {
+    const socials: SocialLink[] = [
+        {
+            label: "GitHub",
+            value: "MananGandhi1810",
+            href: "https://github.com/MananGandhi1810",
+        },
+        {
+            label: "X",
+            value: "@MananGandhi1810",
+            href: "https://x.com/MananGandhi1810",
+        },
+        {
+            label: "Instagram",
+            value: "@manan.py",
+            href: "https://instagram.com/manan.py",
+        },
+        {
+            label: "LinkedIn",
+            value: "Manan Gandhi",
+            href: "https://linkedin.com/in/manangandhi1810",
+        },
+        {
+            label: "Matiks",
+            value: "@manangandhi1810",
+            href: "https://www.matiks.in/profile/manangandhi1810",
+        },
+        {
+            label: "Chess.com",
+            value: "@manan181006",
+            href: "https://www.chess.com/member/manan181006",
+        },
+        {
+            label: "Email",
+            value: "hello@manan.cloud",
+            href: "mailto:hello@manan.cloud",
+        },
+    ];
+
     return (
         <main className="mx-auto my-12 max-w-5xl px-6">
             <div className="mb-8">
@@ -16,52 +56,15 @@ export default function AboutPage() {
                 contributing to open-source projects. I also enjoy finding bugs
                 and security vulnerabilities in applications and websites.
             </p>
-            <div className="mt-8 space-y-2 text-sm sm:text-base">
-                <p className="text-zinc-300">
-                    <span className="text-zinc-400">GitHub:</span>{" "}
-                    <a
-                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
-                        href="https://github.com/MananGandhi1810"
-                    >
-                        MananGandhi1810
-                    </a>
-                </p>
-                <p className="text-zinc-300">
-                    <span className="text-zinc-400">X:</span>{" "}
-                    <a
-                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
-                        href="https://x.com/MananGandhi1810"
-                    >
-                        @MananGandhi1810
-                    </a>
-                </p>
-                <p className="text-zinc-300">
-                    <span className="text-zinc-400">Instagram:</span>{" "}
-                    <a
-                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
-                        href="https://instagram.com/manan.py"
-                    >
-                        @manan.py
-                    </a>
-                </p>
-                <p className="text-zinc-300">
-                    <span className="text-zinc-400">LinkedIn:</span>{" "}
-                    <a
-                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
-                        href="https://linkedin.com/in/manangandhi1810"
-                    >
-                        Manan Gandhi
-                    </a>
-                </p>
-                <p className="text-zinc-300">
-                    <span className="text-zinc-400">Email:</span>{" "}
-                    <a
-                        className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
-                        href="mailto:hello@manan.cloud"
-                    >
-                        hello@manan.cloud
-                    </a>
-                </p>
+            <p className="my-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
+                Apart from building software, I enjoy tinkering with hardware
+                (and robotics) and playing on Chess.com and Matiks. Feel free to
+                challenge me to a game sometime!
+            </p>
+            <div className="mt-8 grid grid-cols-1 gap-2 text-sm text-zinc-400 sm:grid-cols-2">
+                {socials.map((social) => (
+                    <SocialsCard key={social.label} social={social} />
+                ))}
             </div>
         </main>
     );
