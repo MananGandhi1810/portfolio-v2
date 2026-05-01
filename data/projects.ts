@@ -13,7 +13,7 @@ export const projects = [
             "Shadcn/UI",
             "Azure",
         ],
-        live: "https://code.manangandhi.tech/",
+        live: "https://code.manan.cloud/",
         repo: "https://github.com/MananGandhi1810/online-ide",
     },
     {
@@ -53,7 +53,6 @@ export const projects = [
             "Prisma ORM",
             "Azure",
         ],
-        live: "https://chess.manangandhi.tech/",
         repo: "https://github.com/MananGandhi1810/online-chess",
     },
     {
