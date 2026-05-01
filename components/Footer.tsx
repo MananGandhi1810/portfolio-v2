@@ -4,7 +4,7 @@ export default function Footer() {
             <p>
                 Made with <span className="text-red-400">♥</span> by{" "}
                 <a
-                    href="https://manangandhi.tech"
+                    href="https://manan.cloud"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium hover:text-white duration-200 transition underline underline-offset-2"

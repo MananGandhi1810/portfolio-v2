@@ -4,4 +4,4 @@ Allow: /about
 Allow: /blog
 Allow: /projects
 
-Sitemap: https://www.manangandhi.tech/sitemap.xml
+Sitemap: https://www.manan.cloud/sitemap.xml
