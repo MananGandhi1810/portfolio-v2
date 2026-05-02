@@ -42,6 +42,7 @@ body {
 }
 
 @media (pointer: fine) {
+
     html,
     body,
     body * {
@@ -125,11 +126,9 @@ body {
 /* richer UI styles */
 /* Elevated cards - clean and minimal */
 .card-elevated {
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.01),
-        rgba(255, 255, 255, 0)
-    );
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.01),
+            rgba(255, 255, 255, 0));
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     transition:
         transform 220ms ease,
@@ -373,13 +372,31 @@ body {
     gap: var(--gap);
     align-items: center;
     white-space: nowrap;
-    animation: marquee 20s linear infinite;
+}
+
+.skills-scroll-track {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+}
+
+.scrollbar-hide {
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
 }
 
 @keyframes marquee {
     0% {
         transform: translateX(0%);
     }
+
     100% {
         transform: translateX(-50%);
     }
