@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 const SKILLS = [
     "Next.js",
     "TypeScript",
@@ -10,6 +8,7 @@ const SKILLS = [
     "PostgreSQL",
     "Socket.IO",
     "Docker",
+    "Prisma ORM",
     "TailwindCSS",
     "Redis",
     "MongoDB",

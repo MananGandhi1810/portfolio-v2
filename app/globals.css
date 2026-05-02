@@ -359,7 +359,6 @@ body {
     -moz-column-break-inside: avoid;
 }
 
-/* Skills marquee */
 .skills-marquee-wrapper {
     overflow: hidden;
 }
@@ -376,8 +375,6 @@ body {
     white-space: nowrap;
     animation: marquee 20s linear infinite;
 }
-
-.skill-item {}
 
 @keyframes marquee {
     0% {
