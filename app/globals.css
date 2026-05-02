@@ -358,3 +358,38 @@ body {
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
 }
+
+/* Skills marquee */
+.skills-marquee-wrapper {
+    overflow: hidden;
+}
+
+.skills-marquee {
+    width: 100%;
+    --gap: 1.5rem;
+}
+
+.skills-track {
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+}
+
+.skill-item {}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skills-track {
+        animation: none;
+    }
+}
