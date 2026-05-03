@@ -244,7 +244,7 @@ export const projects = [
             "A Dart library for using Cloudflare Workers AI to perform various AI-based operations.",
         tech: ["Dart", "Cloudflare"],
         live: "https://pub.dev/packages/cloudflare_ai",
-        repo: "https://pub.dev/packages/cloudflare_ai",
+        repo: "https://github.com/MananGandhi1810/cloudflare-ai-dart",
     },
     {
         title: "Conversify",
