@@ -59,7 +59,7 @@ export default function AboutPage() {
             <p className="my-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
                 Apart from building software, I enjoy tinkering with hardware
                 (and robotics) and playing on Chess.com and Matiks. Feel free to
-                challenge me to a game sometime!
+                challenge me to a game sometimes!
             </p>
             <div className="mt-8 grid grid-cols-1 gap-2 text-sm text-zinc-400 sm:grid-cols-2">
                 {socials.map((social) => (
