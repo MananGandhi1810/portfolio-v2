@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useState } from "react";
 
 const SKILLS = [
     "Next.js",
@@ -24,9 +24,9 @@ const SKILLS = [
 ];
 
 export default function SkillsMarquee() {
-    const shuffledSkills = useRef(
-        SKILLS.sort(() => Math.random() - 0.5),
-    ).current;
+    const [shuffledSkills, setShuffledSkills] = useState(() =>
+        [...SKILLS].sort(() => Math.random() - 0.5),
+    );
 
     return (
         <div className="skills-marquee-wrapper mt-8">
