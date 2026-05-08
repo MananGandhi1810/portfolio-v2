@@ -35,14 +35,12 @@ html {
 body {
     background: var(--bg-900);
     color: var(--fg-100);
-    font-family:
-        var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
         "Roboto Mono", monospace;
     letter-spacing: 0.3px;
 }
 
 @media (pointer: fine) {
-
     html,
     body,
     body * {
@@ -126,9 +124,11 @@ body {
 /* richer UI styles */
 /* Elevated cards - clean and minimal */
 .card-elevated {
-    background: linear-gradient(180deg,
-            rgba(255, 255, 255, 0.01),
-            rgba(255, 255, 255, 0));
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.01),
+        rgba(255, 255, 255, 0)
+    );
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     transition:
         transform 220ms ease,
@@ -293,8 +293,7 @@ body {
 
 /* Programmer-y terminal block style - refined */
 .terminal {
-    font-family:
-        var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    font-family: var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
         "Roboto Mono", monospace;
     background: rgba(0, 168, 255, 0.05);
     border: 1px solid rgba(0, 168, 255, 0.15);

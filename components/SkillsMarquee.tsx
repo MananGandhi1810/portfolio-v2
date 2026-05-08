@@ -43,9 +43,7 @@ export default function SkillsMarquee() {
         <div className="skills-marquee-wrapper mt-8">
             <div className="skills-marquee w-full" aria-hidden>
                 <h2 className="text-2xl font-semibold text-zinc-50">Skills</h2>
-                <div
-                    className="skills-scroll-track mt-2 flex gap-6 items-center overflow-x-auto scrollbar-hide py-2"
-                >
+                <div className="skills-scroll-track mt-2 flex gap-6 items-center overflow-x-auto scrollbar-hide py-2">
                     {shuffledSkills.map((t, i) => (
                         <div
                             key={`${t}-${i}`}

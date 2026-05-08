@@ -137,7 +137,15 @@ export const projects = [
         title: "FormBar",
         description:
             "An open source Google Forms/Tally.so alternative with AI-powered form generation, realtime collaboration and WhatsApp-based form filling options. Runner up at ACM MPSTME ReCode 2026 Hackathon.",
-        tech: ["FastAPI", "Next.js", "Docker", "PostgreSQL", "Redis", "MongoDB", "Gemini 3.0 Flash"],
+        tech: [
+            "FastAPI",
+            "Next.js",
+            "Docker",
+            "PostgreSQL",
+            "Redis",
+            "MongoDB",
+            "Gemini 3.0 Flash",
+        ],
         repo: "https://github.com/MananGandhi1810/FormBar",
     },
     {

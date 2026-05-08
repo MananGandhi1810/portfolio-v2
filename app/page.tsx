@@ -68,9 +68,7 @@ export default function Home() {
                             <Button href="/resume" target="_blank">
                                 See My Resume
                             </Button>
-                            <Button href="/contact">
-                                Contact Me
-                            </Button>
+                            <Button href="/contact">Contact Me</Button>
                         </div>
                     </div>
 

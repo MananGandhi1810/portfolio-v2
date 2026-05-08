@@ -13,10 +13,12 @@ export default function ContactPage() {
         message: "",
     });
     const [isLoading, setIsLoading] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+    const [submitStatus, setSubmitStatus] = useState<
+        "idle" | "success" | "error"
+    >("idle");
 
     const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     ) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -154,12 +156,14 @@ export default function ContactPage() {
 
                     {submitStatus === "success" && (
                         <p className="text-sm text-blue-400">
-                            Message sent successfully! I'll get back to you soon.
+                            Message sent successfully! I'll get back to you
+                            soon.
                         </p>
                     )}
                     {submitStatus === "error" && (
                         <p className="text-sm text-red-400">
-                            Failed to send message. Please try again or contact me directly on social media.
+                            Failed to send message. Please try again or contact
+                            me directly on social media.
                         </p>
                     )}
                 </div>

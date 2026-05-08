@@ -10,7 +10,7 @@ export async function POST(request: Request) {
         if (!name || !email || !subject || !message) {
             return Response.json(
                 { error: "All fields are required" },
-                { status: 400 }
+                { status: 400 },
             );
         }
 
@@ -44,19 +44,19 @@ ${message}
             console.error("Error sending email:", result.error);
             return Response.json(
                 { error: "Failed to send email" },
-                { status: 500 }
+                { status: 500 },
             );
         }
 
         return Response.json(
             { message: "Email sent successfully" },
-            { status: 200 }
+            { status: 200 },
         );
     } catch (error) {
         console.error("Error sending email:", error);
         return Response.json(
             { error: "Failed to send email" },
-            { status: 500 }
+            { status: 500 },
         );
     }
 }
