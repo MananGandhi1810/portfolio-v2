@@ -3,28 +3,39 @@
 import { useState } from "react";
 
 const SKILLS = [
-    "Next.js",
-    "TypeScript",
+    "C",
+    "C++",
+    "Python",
+    "Dart",
+    "Java",
+    "JavaScript/TypeScript",
+    "Bash",
+    "Kotlin",
+    "Flutter",
+    "Django",
+    "Flask",
+    "FastAPI",
     "Node.js",
     "Express.js",
+    "Elysia",
+    "React.js",
+    "React Native",
+    "Next.js",
+    "OpenCV",
+    "Docker",
+    "Redis",
+    "Apache Kafka",
+    "ClickHouse",
+    "MongoDB",
+    "Microsoft Azure",
+    "Amazon Web Services",
     "PostgreSQL",
     "Socket.IO",
-    "Docker",
-    "TailwindCSS",
-    "Redis",
-    "MongoDB",
-    "Flutter",
-    "Python",
-    "FastAPI",
-    "ClickHouse",
-    "Flask",
-    "Azure",
-    "AWS",
     "GCP",
 ];
 
 export default function SkillsMarquee() {
-    const [shuffledSkills, setShuffledSkills] = useState(() =>
+    const [shuffledSkills] = useState(() =>
         [...SKILLS].sort(() => Math.random() - 0.5),
     );
 
