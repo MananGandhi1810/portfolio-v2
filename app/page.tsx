@@ -5,7 +5,6 @@ import GitHubContrib from "../components/GitHubContrib";
 import ProjectCard from "../components/ProjectCard";
 import Button from "../components/ui/Button";
 import { projects } from "../data/projects";
-import SkillsMarquee from "../components/SkillsMarquee";
 import Card from "@/components/ui/Card";
 import Link from "next/link";
 import { useState } from "react";
@@ -93,8 +92,6 @@ export default function Home() {
                     </div>
                 </div>
             </Card>
-
-            <SkillsMarquee />
 
             <section className="mt-8">
                 <div className="flex items-center justify-between">
