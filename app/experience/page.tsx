@@ -21,7 +21,7 @@ export default function ExperiencePage() {
                             Ikiquant Technologies
                         </h3>
                         <p className="mt-2 text-sm text-zinc-500 font-mono">
-                            May 2026 — Present
+                            March 2026 — Present
                         </p>
                     </div>
 
