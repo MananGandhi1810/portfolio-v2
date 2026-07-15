@@ -175,7 +175,7 @@ export const projects = [
             "SerpAPI",
             "MongoDB",
         ],
-        repo: "https://github.com/MananGandhi1810/cc-4.0-round-1",
+        repo: "https://github.com/MananGandhi1810/DreamScale",
     },
     {
         title: "HomeConnect",
