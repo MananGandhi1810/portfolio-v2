@@ -191,7 +191,7 @@ export const projects = [
             "SerpAPI",
             "MongoDB",
         ],
-        repo: "https://github.com/MananGandhi1810/cc-4.0-round-1",
+        repo: "https://github.com/ItsSpirax/Cyber-Cypher-4.0-Finals",
     },
     {
         title: "YetiCode",
@@ -209,7 +209,7 @@ export const projects = [
             "Resend API",
             "Docker",
         ],
-        repo: "https://github.com/MananGandhi1810/datathon-round-2",
+        repo: "https://github.com/MananGandhi1810/YetiCode",
     },
     {
         title: "DockerSensei",
