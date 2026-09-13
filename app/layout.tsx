@@ -5,6 +5,7 @@ import SiteHeader from "../components/SiteHeader";
 import Footer from "@/components/Footer";
 import EasterEgg from "@/components/EasterEgg";
 import MouseFollowerDot from "@/components/MouseFollowerDot";
+import IntelliAnnounceNotification from "@/components/IntelliAnnounceNotification";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
                 </div>
                 <MouseFollowerDot />
                 <EasterEgg />
+                <IntelliAnnounceNotification />
                 <Analytics />
                 <SpeedInsights />
             </body>

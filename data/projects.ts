@@ -1,5 +1,20 @@
 export const projects = [
     {
+        title: "IntelliAnnounce",
+        description:
+            "IntelliAnnounce filters important Indian market announcements and delivers concise AI-generated summaries as speech, so traders can stay focused on executing the trade instead of monitoring the screen.",
+        tech: [
+            "Next.js",
+            "Express.js",
+            "Socket.io",
+            "Redis",
+            "PostgreSQL",
+            "Docker",
+            "Drizzle ORM",
+        ],
+        live: "https://intelliannounce.manan.cloud",
+    },
+    {
         title: "LeetCode Clone",
         description:
             "A platform to practice logic-based programming questions. Supports multiple languages (Python, Java, C, C++).",
