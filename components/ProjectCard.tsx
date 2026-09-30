@@ -9,24 +9,6 @@ type Project = {
 export default function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="project-card">
-      <div className="project-top">
-        <span className="project-symbol" aria-hidden="true">
-          {project.title === "IntelliAnnounce"
-            ? "[≋]"
-            : project.title.includes("OnTrack")
-              ? "[↗]"
-              : project.title === "FluxGate"
-                ? "{↳}"
-                : "</>"}
-        </span>
-        <span className="tiny-label">
-          {project.live
-            ? "LIVE PROJECT"
-            : project.repo
-              ? "OPEN SOURCE"
-              : "COMMUNITY PROJECT"}
-        </span>
-      </div>
       <h3>{project.title}</h3>
       <p className="project-description">{project.description}</p>
       <div className="project-tech">
@@ -37,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="project-links">
         {project.live && (
           <a href={project.live} target="_blank" rel="noreferrer">
-            Visit project <ArrowUpRight size={15} />
+            Live <ArrowUpRight size={15} />
           </a>
         )}
         {project.repo && (
@@ -50,9 +32,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             <Github size={14} /> Source
           </a>
         )}
-        {!project.live && !project.repo && (
-          <span className="muted">Community project</span>
-        )}
+        {!project.live && !project.repo && <span className="muted"></span>}
       </div>
     </article>
   );

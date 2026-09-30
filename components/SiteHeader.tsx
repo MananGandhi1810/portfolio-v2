@@ -26,7 +26,7 @@ export default function SiteHeader() {
       <div className="nav-inner">
         <Link href="/" className="wordmark" onClick={() => setOpen(false)}>
           <span className="accent-text">~/</span> manan
-          <span className="wordmark-dot">.</span>
+          <span className="wordmark-dot">_</span>
         </Link>
         <nav className="desktop-nav" aria-label="Main navigation">
           {links.map(([href, label]) => (

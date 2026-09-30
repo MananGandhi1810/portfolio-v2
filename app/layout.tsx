@@ -15,7 +15,7 @@ const monoFont = Space_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Manan Gandhi — Software, systems & curiosity",
+    default: "Manan Gandhi",
     template: "%s | Manan Gandhi",
   },
   description:

@@ -22,12 +22,9 @@ export default function ProjectsPage() {
   });
   return (
     <main id="main-content" className="mx-auto my-12 max-w-5xl px-6">
-      <div className="eyebrow">THE PROJECT ARCHIVE</div>
-      <h1 className="page-title">
-        Built out of curiosity<span className="accent-text">.</span>
-      </h1>
+      <h1 className="page-title">Projects</h1>
       <p className="muted mt-4">
-        Experiments, hackathon builds, and software people use.
+        Things I’ve built, including hackathon projects and open-source tools.
       </p>
       <div className="project-toolbar">
         <div className="search-box">
@@ -57,8 +54,7 @@ export default function ProjectsPage() {
         </div>
       </div>
       <p className="result-count" role="status">
-        {String(filtered.length).padStart(2, "0")} projects /{" "}
-        {filter.toLowerCase()}
+        {filtered.length} projects · {filter.toLowerCase()}
       </p>
       <div className="featured-grid">
         {filtered.map((p) => (

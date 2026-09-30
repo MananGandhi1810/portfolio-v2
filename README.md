@@ -7,7 +7,7 @@ A modern, responsive personal portfolio website built with Next.js, showcasing p
 ## Features
 
 -   **Responsive Design**: Optimized for all device sizes
--   **Dark Theme**: Terminal-inspired layout, ASCII artwork, and a blue accent
+-   **Dark Theme**: Compact monospace layout with a blue accent and a link to the netcat portfolio
 -   **Project Showcase**: Searchable project archive with technology and category filters
 -   **Blog Section**: Space for sharing thoughts and technical articles
 -   **About Page**: Personal introduction and social links

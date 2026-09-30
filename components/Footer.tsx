@@ -6,7 +6,7 @@ export default function Footer() {
         <Link href="/" className="wordmark">
           <span className="accent-text">~/</span> manan.
         </Link>
-        <p>Built with curiosity. Shared with the world.</p>
+        <p>Manan Gandhi</p>
       </div>
       <div className="footer-links">
         <a href="mailto:hello@manan.cloud">Email ↗</a>
@@ -22,7 +22,7 @@ export default function Footer() {
           target="_blank"
           rel="noreferrer"
         >
-          View source ↗
+          Source ↗
         </a>
       </div>
       <span className="tiny-label">
