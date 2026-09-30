@@ -1,6 +1,10 @@
 "use client";
 import { useState } from "react";
 import { Search, X } from "lucide-react";
+import PageHeading from "@/components/PageHeading";
+import ProjectVisual from "@/components/ProjectVisual";
+import Link from "next/link";
+import { caseStudies } from "@/data/case-studies";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 const filters = ["All", "Web", "Mobile", "AI", "Open source"];
@@ -21,11 +25,26 @@ export default function ProjectsPage() {
     );
   });
   return (
-    <main id="main-content" className="mx-auto my-12 max-w-5xl px-6">
-      <h1 className="page-title">Projects</h1>
-      <p className="muted mt-4">
-        Things I’ve built, including hackathon projects and open-source tools.
-      </p>
+    <main id="main-content" className="page-shell">
+      <PageHeading label="BUILDS & EXPERIMENTS" title="Projects">
+        <p>
+          Things I’ve built, from trading systems and developer tools to mobile
+          apps and hackathon experiments.
+        </p>
+      </PageHeading>
+      <div className="archive-highlights">
+        {caseStudies.slice(0, 2).map((p) => (
+          <Link href={`/projects/${p.slug}`} key={p.slug}>
+            <ProjectVisual type={p.visual} />
+            <h2>
+              {p.title} <span>Build notes →</span>
+            </h2>
+          </Link>
+        ))}
+      </div>
+      <div className="section-heading archive-heading">
+        <h2>Project archive</h2>
+      </div>
       <div className="project-toolbar">
         <div className="search-box">
           <Search size={17} />

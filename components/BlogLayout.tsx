@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { ReactNode, useState, useRef } from "react";
 import Link from "next/link";
+import PageHeading from "./PageHeading";
 import { Copy, Check } from "lucide-react";
 
 interface BlogLayoutProps {
@@ -82,27 +83,23 @@ export default function BlogLayout({
   content,
 }: BlogLayoutProps) {
   return (
-    <article id="main-content" className="my-12">
-      <div className="mx-auto max-w-5xl px-6">
-        <header className="mb-8 border-b border-zinc-800 pb-8">
-          <h1 className="text-3xl sm:text-5xl font-bold text-zinc-50 tracking-tight mb-4">
-            {title}
-          </h1>
-          <div className="flex items-center gap-4 text-sm text-zinc-400">
-            <time dateTime={date}>
-              {new Date(date).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
-            </time>
-            {author && <span>•</span>}
-            {author && <span>{author}</span>}
-          </div>
-        </header>
-      </div>
-
-      <div className="prose prose-invert mx-auto max-w-5xl px-6">
+    <article id="main-content" className="page-shell article-shell">
+      <Link href="/blog" className="back-link">
+        ← Writing
+      </Link>
+      <PageHeading label="WRITING" title={title}>
+        <p>
+          <time dateTime={date}>
+            {new Date(date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
+          {author && ` · ${author}`}
+        </p>
+      </PageHeading>
+      <div className="prose prose-invert article-body">
         <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
           components={markdownComponents}
@@ -111,7 +108,7 @@ export default function BlogLayout({
         </ReactMarkdown>
       </div>
 
-      <div className="mx-auto max-w-5xl px-6">
+      <div className="article-footer">
         <footer className="mt-12 pt-8 border-t border-zinc-800">
           <Link
             href="/blog"

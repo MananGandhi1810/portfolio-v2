@@ -1,21 +1,15 @@
-import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="site-footer">
+      <span>© {new Date().getFullYear()} Manan Gandhi</span>
       <div>
-        <Link href="/" className="wordmark">
-          <span className="accent-text">~/</span> manan.
-        </Link>
-        <p>Manan Gandhi</p>
-      </div>
-      <div className="footer-links">
-        <a href="mailto:hello@manan.cloud">Email ↗</a>
+        <a href="mailto:hello@manan.cloud">Email</a>
         <a
           href="https://www.linkedin.com/in/manangandhi1810"
           target="_blank"
           rel="noreferrer"
         >
-          LinkedIn ↗
+          LinkedIn
         </a>
         <a
           href="https://github.com/MananGandhi1810/portfolio-v2"
@@ -25,9 +19,7 @@ export default function Footer() {
           Source ↗
         </a>
       </div>
-      <span className="tiny-label">
-        © {new Date().getFullYear()} MANAN GANDHI
-      </span>
+      <span className="footer-sign">~/manan.cloud</span>
     </footer>
   );
 }

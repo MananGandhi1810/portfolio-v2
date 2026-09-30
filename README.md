@@ -62,6 +62,8 @@ A modern, responsive personal portfolio website built with Next.js, showcasing p
 
 ## Content sources
 
-The introduction and skills are based on [Manan’s GitHub profile](https://github.com/MananGandhi1810). Project descriptions and experience retain the owner-provided repository content. LinkedIn and some project websites were unavailable during research; no new claims were inferred from them.
+The introduction and skills are based on [Manan’s GitHub profile](https://github.com/MananGandhi1810). Experience results, education, and skills use the owner-provided resume; Sykes & Rays dates remain May–July 2025 as confirmed by the owner. Project detail pages draw on the resume and public repositories. FormBar feature details also use indexed public LinkedIn posts.
 
 The contact form requires `RESEND_API_KEY` and `RESEND_FROM_EMAIL`. Without these, the website still builds and the form returns an unavailable response; visitors can email `hello@manan.cloud`. GitHub contribution activity uses an external service and falls back to a profile link if it is unavailable.
+
+The OpenQuant dashboard image comes from the [OpenQuant repository](https://github.com/NeuroTechh/OpenQuant/blob/main/assets/dashboard1.png). Other project visuals are labeled architecture sketches. See [the redesign plan](docs/portfolio-redesign-plan.md) for research and content provenance.

@@ -1,4 +1,6 @@
-import { ArrowUpRight, Github } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { findCaseStudy } from "@/data/case-studies";
 type Project = {
   title: string;
   description: string;
@@ -7,9 +9,16 @@ type Project = {
   live?: string;
 };
 export default function ProjectCard({ project }: { project: Project }) {
+  const study = findCaseStudy(project.title);
   return (
     <article className="project-card">
-      <h3>{project.title}</h3>
+      <h3>
+        {study ? (
+          <Link href={`/projects/${study.slug}`}>{project.title}</Link>
+        ) : (
+          project.title
+        )}
+      </h3>
       <p className="project-description">{project.description}</p>
       <div className="project-tech">
         {project.tech?.map((t) => (
@@ -17,9 +26,15 @@ export default function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
       <div className="project-links">
+        {study && <Link href={`/projects/${study.slug}`}>Build notes →</Link>}
         {project.live && (
-          <a href={project.live} target="_blank" rel="noreferrer">
-            Live <ArrowUpRight size={15} />
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${project.title}`}
+          >
+            Live <ArrowUpRight size={14} />
           </a>
         )}
         {project.repo && (
@@ -29,10 +44,9 @@ export default function ProjectCard({ project }: { project: Project }) {
             rel="noreferrer"
             aria-label={`Source code for ${project.title}`}
           >
-            <Github size={14} /> Source
+            Source <ArrowUpRight size={14} />
           </a>
         )}
-        {!project.live && !project.repo && <span className="muted"></span>}
       </div>
     </article>
   );
