@@ -1,3 +1,5 @@
+import { openAlgoPullRequest, openAlgoRecognition } from "@/data/about";
+
 export default function ExperiencePage() {
     return (
         <main className="mx-auto my-12 max-w-5xl px-6">
@@ -23,6 +25,33 @@ export default function ExperiencePage() {
                         <p className="mt-2 text-sm text-zinc-500 font-mono">
                             March 2026 — Present
                         </p>
+                        <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
+                            Working on US index options trading infrastructure,
+                            including execution, market data, and risk
+                            management. Remote, India.
+                        </p>
+                        <ul className="mt-4 list-disc pl-5 space-y-2 text-sm sm:text-base text-zinc-300 leading-relaxed">
+                            <li>
+                                Built a real-time risk management system for
+                                live trading operations and continuous exposure
+                                monitoring.
+                            </li>
+                            <li>
+                                Reworked execution and trade-processing paths,
+                                reducing strategy execution latency by{" "}
+                                <strong>15×</strong> across all strategies.
+                            </li>
+                            <li>
+                                Optimized market-data and Options Greeks
+                                pipelines by <strong>3×</strong>, improving
+                                real-time computation throughput.
+                            </li>
+                            <li>
+                                Built real-time monitoring, research, and live
+                                market-data dashboards with interactive
+                                charting.
+                            </li>
+                        </ul>
                     </div>
 
                     <div className="group relative pl-8">
@@ -44,10 +73,33 @@ export default function ExperiencePage() {
                             Contributed to OpenAlgo, fixing a critical bug in
                             the Zerodha Websockets Module.
                             <br />
-                            Developed automation scripts to streamline traders'
-                            day-to-day workflows and end-of-day data processing,
-                            reducing manual effort and improving data
-                            reliability.
+                            Developed automation scripts to streamline
+                            traders&apos; day-to-day workflows and end-of-day
+                            data processing, reducing traders&apos; manual
+                            effort by <strong>90%</strong>
+                            and improving data reliability.
+                        </p>
+                        <p className="mt-4 text-sm text-zinc-400">
+                            The Zerodha WebSocket logging fix was merged into
+                            OpenAlgo and publicly recognized by maintainer
+                            Rajandran R.{" "}
+                            <a
+                                href={openAlgoPullRequest}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
+                            >
+                                Merged pull request
+                            </a>
+                            {" · "}
+                            <a
+                                href={openAlgoRecognition}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:text-blue-300 underline underline-offset-2"
+                            >
+                                Maintainer acknowledgment
+                            </a>
                         </p>
                     </div>
                 </div>

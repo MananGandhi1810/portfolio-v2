@@ -2,7 +2,7 @@ export const projects = [
     {
         title: "IntelliAnnounce",
         description:
-            "IntelliAnnounce filters important Indian market announcements and delivers concise AI-generated summaries as speech, so traders can stay focused on executing the trade instead of monitoring the screen.",
+            "IntelliAnnounce filters important Indian market announcements and delivers concise AI-generated summaries as speech, so traders can stay focused on executing the trade instead of monitoring the screen. Used regularly by traders, with personalized watchlists, intelligent filtering, and real-time alerts. Redis handles live announcements on the hot path, with nightly cron-based persistence to PostgreSQL.",
         tech: [
             "Next.js",
             "Express.js",
@@ -17,7 +17,7 @@ export const projects = [
     {
         title: "LeetCode Clone",
         description:
-            "A platform to practice logic-based programming questions. Supports multiple languages (Python, Java, C, C++).",
+            "A coding platform used by 200+ users, supporting Python, Java, C, and C++. Includes submissions, leaderboards, editorials, and AI-assisted hints. An asynchronous pipeline uses Docker containers for isolated execution and Redis Pub/Sub messaging, with hidden test cases, resource limits, and persistent submission telemetry.",
         tech: [
             "Express.js",
             "React.js",
@@ -73,7 +73,7 @@ export const projects = [
     {
         title: "FluxGate",
         description:
-            "Self-hostable deployment platform to deploy GitHub repos to self-hosted servers; includes natural-language deploy option. Winner — Best use of Gemini API at HackThisFall Virtual 2024.",
+            "Self-hostable deployment platform to deploy GitHub repos to self-hosted servers; automatically rebuilds and deploys applications when changes are pushed to GitHub. Includes isolated deployments, branch-aware environments, real-time build logs, failure alerts, and natural-language infrastructure management. Winner — Best use of Gemini API at HackThisFall Virtual 2024.",
         tech: [
             "Express.js",
             "Next.js",
@@ -89,7 +89,7 @@ export const projects = [
     {
         title: "Adeon",
         description:
-            "An open source developer microtools platform designed to streamline and enhance the software development lifecycle using AI. Features include AI-powered Code Documentation Generation, Pull Request Analysis, Vulnerability Scanning, Development Environment Provisioning and CI/CD triggered Deployments.",
+            "An open source developer microtools platform designed to streamline and enhance the software development lifecycle using AI. Features include AI-powered Code Documentation Generation, Pull Request Analysis, Vulnerability Scanning, Development Environment Provisioning and CI/CD triggered Deployments. A multi-service architecture separates analysis and automation workflows. Ranked Top 35 globally among 1,500+ projects at the 100X Engineers Buildathon.",
         tech: [
             "Express.js",
             "Next.js",
@@ -144,14 +144,14 @@ export const projects = [
     {
         title: "OpenQuant",
         description:
-            "An open source data dashboard with AI-powered insights, visualizations, strategy backtesting and more for the stock market. Winner of FOSS Club MPSTME CodeForge 2026 Hackathon.",
+            "A team-built NIFTY options analytics platform for open interest, volume, put-call ratios, volatility, Greeks, and strike-level analysis. Includes strategy construction, payoff analysis, historical backtesting, anomaly detection, and AI-assisted market interpretation. 1st place at FOSS Club MPSTME CodeForge 2026.",
         tech: ["FastAPI", "Next.js", "Docker", "SQLite", "Redis", "OpenRouter"],
-        repo: "https://github.com/Neurotechh/CodeForge",
+        repo: "https://github.com/NeuroTechh/OpenQuant",
     },
     {
         title: "FormBar",
         description:
-            "An open source Google Forms/Tally.so alternative with AI-powered form generation, realtime collaboration and WhatsApp-based form filling options. Runner up at ACM MPSTME ReCode 2026 Hackathon.",
+            "An open source Google Forms/Tally.so alternative with AI-powered form generation, realtime collaboration and WhatsApp-based form filling and UPI payment collection. 2nd place in the Full Stack track at ACM MPSTME ReCode 2026.",
         tech: [
             "FastAPI",
             "Next.js",
@@ -289,5 +289,26 @@ export const projects = [
             "A website to help people make informed decisions when buying electric vehicles.",
         tech: ["Python", "Flask", "HTML", "CSS", "JavaScript"],
         repo: "https://github.com/MananGandhi1810/FooBar-Electric-Vehicle-CyberCypher-Hackathon",
+    },
+    {
+        title: "Terminal Portfolio",
+        description:
+            "My portfolio served over a TCP socket using netcat. Includes commands and an AI chat interface. Connect with nc sh.manan.cloud 1810; the implementation is explained in my blog.",
+        tech: ["Python", "TCP", "Docker", "Gemini"],
+        repo: "https://github.com/MananGandhi1810/terminal-portfolio",
+    },
+    {
+        title: "ManPost",
+        description:
+            "A developer tool for scaffolding projects, defining schemas, managing API endpoints, and integrating with GitHub and OpenAPI specifications.",
+        tech: ["OpenAPI", "GitHub API"],
+        repo: "https://github.com/MananGandhi1810/manpost",
+    },
+    {
+        title: "CodeSpar",
+        description:
+            "An experimental red-team versus blue-team security agents platform.",
+        tech: ["AI", "Security"],
+        repo: "https://github.com/MananGandhi1810/codespar",
     },
 ];
