@@ -357,6 +357,14 @@ body {
     }
 }
 
+@font-face {
+    font-family: "Hero ASCII";
+    src: url("/fonts/FiraMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
 .ascii-name {
     position: relative;
     container-type: inline-size;
@@ -365,11 +373,11 @@ body {
 
 .ascii-name pre {
     margin: 0;
-    font-family: inherit;
-    font-size: clamp(7px, 3.2cqi, 17px);
+    font-family: "Hero ASCII", monospace;
+    font-size: min(3.2cqi, 17px);
     font-weight: 400;
     line-height: 1.25;
-    letter-spacing: -0.04em;
+    letter-spacing: 0;
     white-space: pre;
 }
 
