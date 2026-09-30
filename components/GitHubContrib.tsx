@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import AsciiLoader from "./AsciiLoader";
 
 type Contribution = {
     date: string;
@@ -68,8 +69,8 @@ export default function GitHubContrib({
 
     if (loading) {
         return (
-            <div className="mt-6 w-full animate-pulse flex flex-col gap-2">
-                <div className="h-[100px] w-full bg-neutral-800/50 rounded-lg"></div>
+            <div className="mt-6 w-full flex justify-center">
+                <AsciiLoader label="Loading GitHub activity…" compact />
             </div>
         );
     }

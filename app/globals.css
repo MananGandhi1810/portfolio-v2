@@ -445,3 +445,35 @@ body {
         animation: none;
     }
 }
+
+/* An actual ASCII spinner: frames change, the text block stays still. */
+.ascii-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: var(--accent);
+}
+
+.ascii-loader pre {
+    margin: 0;
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-size: 10px;
+    line-height: 11px;
+    white-space: pre;
+    user-select: none;
+}
+
+.ascii-loader > span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.ascii-loader-compact {
+    gap: 8px;
+}
+
+.ascii-loader-compact pre {
+    font-size: 7px;
+    line-height: 7px;
+}
