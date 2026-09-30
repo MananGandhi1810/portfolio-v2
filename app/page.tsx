@@ -1,148 +1,229 @@
 "use client";
-
 import Image from "next/image";
-import GitHubContrib from "../components/GitHubContrib";
-import ProjectCard from "../components/ProjectCard";
-import Button from "../components/ui/Button";
-import { projects } from "../data/projects";
-import Card from "@/components/ui/Card";
 import Link from "next/link";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Copy,
+  Check,
+  Terminal,
+  Github,
+} from "lucide-react";
 import { useState } from "react";
-
+import ProjectCard from "@/components/ProjectCard";
+import GitHubContrib from "@/components/GitHubContrib";
+import { projects } from "@/data/projects";
+const art = `        .-------------------.
+        |  > hello, world_  |
+        |                   |
+        |    { build(); }   |
+        |                   |
+        '-------------------'
+             /       \\
+        ____/_________\\____
+       /___________________\\`;
 export default function Home() {
-    const [copied, setCopied] = useState(false);
-
-    const handleCopy = async () => {
-        await navigator.clipboard.writeText("nc sh.manan.cloud 1810");
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
-    };
-
-    return (
-        <main className="mx-auto my-4 max-w-5xl px-6">
-            <Card className="border border-white p-8 fade-in-up card-elevated">
-                <div className="flex flex-col gap-6 sm:items-start sm:justify-between">
-                    <div className="w-full">
-                        <div className="flex gap-6 flex-col sm:flex-row items-center">
-                            <div className="w-3/5 sm:w-20 aspect-square overflow-hidden ring-1 ring-white/10 shrink-0">
-                                <Image
-                                    src="/manangandhi.png"
-                                    alt="Manan Gandhi"
-                                    width={80}
-                                    height={80}
-                                    className="object-cover w-full h-full"
-                                />
-                            </div>
-                            <div className="w-full sm:w-auto">
-                                <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50 tracking-tight">
-                                    Hi, I&apos;m Manan Gandhi
-                                </h1>
-                                <p className="text-xs sm:text-sm text-zinc-400 mt-2">
-                                    19 · Mid Frequency Trading Intern @ IkiQuant
-                                    Technologies · FOSS Enthusiast
-                                </p>
-                            </div>
-                        </div>
-
-                        <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed">
-                            I'm a 19-year-old computer engineering student at
-                            NMIMS MPSTME. I like to code and build projects. I'm
-                            experienced in App Development, Backend Development,
-                            Cybersecurity, and AI/ML. I am currently working as
-                            a Mid Frequency Trading Intern at IkiQuant
-                            Technologies. I love participating in hackathons,
-                            and have won 7 hackathons (yet). I'm a FOSS
-                            enthusiast, and I love building and contributing to
-                            open-source projects. I also enjoy finding bugs and
-                            security vulnerabilities in applications and
-                            websites.
-                        </p>
-
-                        <div className="mt-8 flex gap-2 flex-col sm:flex-row justify-center">
-                            <Button href="/experience">
-                                My Work Experience
-                            </Button>
-                            <Button href="/projects">See My Projects</Button>
-                            <Button href="/blog">Read My Blog</Button>
-                            <Button href="/resume" target="_blank">
-                                See My Resume
-                            </Button>
-                            <Button href="/contact">Contact Me</Button>
-                        </div>
-                    </div>
-
-                    <div className="w-full pt-4 border-t border-zinc-700 hidden sm:block">
-                        <div className="text-center">
-                            <h4 className="text-sm font-semibold text-zinc-50 mb-2">
-                                Terminal Version
-                            </h4>
-                            <p className="text-xs text-zinc-300 mb-3">
-                                Access the terminal version of this website:
-                            </p>
-                            <span
-                                className="inline-block bg-zinc-800 px-3 py-1 text-xs font-mono text-zinc-200 cursor-pointer hover:bg-zinc-700 transition-colors select-none"
-                                onClick={handleCopy}
-                                title="Click to copy command"
-                            >
-                                {copied
-                                    ? "Copied!"
-                                    : "$ nc sh.manan.cloud 1810"}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </Card>
-
-            <section className="mt-8">
-                <div className="flex items-center justify-between">
-                    <h2 className="text-2xl font-semibold text-zinc-50">
-                        Featured projects
-                    </h2>
-                    <Link
-                        href="/projects"
-                        className="text-sm text-zinc-400 hover:text-zinc-200 hover:underline underline-offset-2"
-                    >
-                        View all
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={2}
-                            stroke="currentColor"
-                            className="inline-block w-4 h-4 ml-1 -mt-0.5"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                            />
-                        </svg>
-                    </Link>
-                </div>
-
-                <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    {projects.slice(0, 6).map((p, i) => (
-                        <div
-                            key={p.title}
-                            className={`fade-in-up-delayed`}
-                            style={{ animationDelay: `${i * 80}ms` }}
-                        >
-                            <ProjectCard project={p} />
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            <section
-                className="fade-in-up-delayed mt-8"
-                style={{ animationDelay: `480ms` }}
-            >
-                <Card className="border border-white p-8 pt-0">
-                    <div className="">
-                        <GitHubContrib username="MananGandhi1810" />
-                    </div>
-                </Card>
-            </section>
-        </main>
-    );
+  const [copy, setCopy] = useState("idle");
+  async function copyCommand() {
+    try {
+      await navigator.clipboard.writeText("nc sh.manan.cloud 1810");
+      setCopy("copied");
+    } catch {
+      setCopy("failed");
+    }
+    setTimeout(() => setCopy("idle"), 2500);
+  }
+  return (
+    <main id="main-content" className="home-shell">
+      <section className="hero fade-in-up">
+        <div className="hero-copy">
+          <div className="eyebrow">
+            <span className="status-dot" /> ENGINEERING · OPEN SOURCE · FINANCE
+          </div>
+          <h1>
+            Hi, I’m Manan<span className="accent-text">.</span>
+            <br />
+            <span className="hero-muted">
+              I build things
+              <br />
+              that do things.
+            </span>
+          </h1>
+          <p className="hero-description">
+            From trading systems to tools for developers. I’m a computer
+            engineering student who likes turning curious ideas into useful
+            software.
+          </p>
+          <div className="hero-buttons">
+            <Link href="/projects" className="solid-button">
+              Explore my work <ArrowRight size={17} />
+            </Link>
+            <Link href="/contact" className="text-button">
+              Let’s talk <ArrowUpRight size={17} />
+            </Link>
+          </div>
+          <div className="hero-current">
+            <Image
+              src="/manangandhi.png"
+              alt="Manan Gandhi"
+              width={36}
+              height={36}
+            />
+            <div>
+              <span className="tiny-label">CURRENTLY</span>
+              <p>
+                Mid Frequency Trading Intern{" "}
+                <span className="muted">@ IkiQuant</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="hero-terminal">
+          <div className="terminal-top">
+            <span className="terminal-dots">● ● ●</span>
+            <span>manan@portfolio: ~</span>
+            <Terminal size={14} />
+          </div>
+          <div className="terminal-content">
+            <p>
+              <span className="accent-text">❯</span> cat introduction.txt
+            </p>
+            <pre className="ascii-computer" role="img" aria-label="ASCII illustration of a computer saying hello, world">
+              {art}
+            </pre>
+            <p className="terminal-comment">
+              {"// a little curiosity goes a long way"}
+            </p>
+            <div className="terminal-profile">
+              <p>
+                <span>name</span> Manan Gandhi
+              </p>
+              <p>
+                <span>studying</span> Computer Engineering
+              </p>
+              <p>
+                <span>campus</span> NMIMS MPSTME
+              </p>
+              <p>
+                <span>interests</span> code, markets, FOSS
+              </p>
+            </div>
+            <p className="terminal-ready">
+              <span className="accent-text">❯</span> always building
+              <span className="terminal-cursor" />
+            </p>
+          </div>
+          <div className="terminal-bottom">
+            <span className="status-dot" /> curiosity.exe is running
+          </div>
+        </div>
+      </section>
+      <div className="specialties">
+        <span>BACKEND SYSTEMS</span>
+        <span className="accent-text">+</span>
+        <span>MOBILE APPS</span>
+        <span className="accent-text">+</span>
+        <span>DEVELOPER TOOLS</span>
+        <span className="accent-text">+</span>
+        <span>AI / ML</span>
+      </div>
+      <section className="home-section">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">01 / SELECTED WORK</div>
+            <h2>Ideas, shipped.</h2>
+          </div>
+          <Link href="/projects" className="text-button">
+            All {projects.length} projects <ArrowUpRight size={16} />
+          </Link>
+        </div>
+        <div className="featured-grid">
+          {[projects[0], projects[1], projects[2], projects[5]].map(
+            (project) => (
+              <ProjectCard key={project.title} project={project} />
+            ),
+          )}
+        </div>
+      </section>
+      <section className="home-section about-strip">
+        <div>
+          <div className="eyebrow">02 / THE PERSON BEHIND THE CODE</div>
+          <h2>Curiosity is the constant.</h2>
+        </div>
+        <div>
+          <p>
+            I build web apps, cross-platform mobile apps, backend services, and
+            open-source tools. Lately, I’ve been exploring where technology
+            meets finance.
+          </p>
+          <p className="muted">
+            Outside the editor: hardware, robotics, chess, and the next
+            hackathon.
+          </p>
+          <Link href="/about" className="text-button">
+            A little more about me <ArrowRight size={16} />
+          </Link>
+        </div>
+      </section>
+      <section className="home-section">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow">03 / OUT IN THE OPEN</div>
+            <h2>Small commits. Real progress.</h2>
+          </div>
+          <a
+            href="https://github.com/MananGandhi1810"
+            target="_blank"
+            rel="noreferrer"
+            className="text-button"
+          >
+            <Github size={16} /> GitHub <ArrowUpRight size={15} />
+          </a>
+        </div>
+        <div className="contribution-panel">
+          <GitHubContrib username="MananGandhi1810" />
+        </div>
+      </section>
+      <section className="home-section terminal-invite">
+        <div>
+          <div className="eyebrow">A DIFFERENT WAY IN</div>
+          <h2>This portfolio has a terminal.</h2>
+          <p className="muted">No browser required. Just a little netcat.</p>
+          <Link href="/blog/portfolio-over-terminal" className="text-button">
+            How I built it <ArrowUpRight size={15} />
+          </Link>
+        </div>
+        <div>
+          <button
+            className="copy-command"
+            onClick={copyCommand}
+            aria-label="Copy terminal connection command"
+          >
+            <span>
+              <span className="accent-text">$</span> nc sh.manan.cloud 1810
+            </span>
+            {copy === "copied" ? <Check size={17} /> : <Copy size={17} />}
+          </button>
+          <p className="copy-status" role="status">
+            {copy === "copied"
+              ? "Copied. See you in the terminal."
+              : copy === "failed"
+                ? "Select and copy the command above."
+                : "Click to copy · paste into your terminal"}
+          </p>
+        </div>
+      </section>
+      <section className="closing-section">
+        <div className="eyebrow">GOT SOMETHING IN MIND?</div>
+        <h2>
+          Let’s build something
+          <br />
+          <span className="accent-text">worth putting out there.</span>
+        </h2>
+        <Link href="/contact" className="solid-button">
+          Start a conversation <ArrowUpRight size={17} />
+        </Link>
+      </section>
+    </main>
+  );
 }

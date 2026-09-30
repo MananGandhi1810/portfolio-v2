@@ -1,147 +1,90 @@
 "use client";
-
 import Link from "next/link";
-import { Github, Twitter, Instagram, Menu, X, Linkedin } from "lucide-react";
-import { useState } from "react";
-import Button from "./ui/Button";
-
+import { usePathname } from "next/navigation";
+import { Github, Menu, X, ArrowUpRight } from "lucide-react";
+import { useEffect, useState } from "react";
+const links = [
+  ["/", "Home"],
+  ["/projects", "Projects"],
+  ["/experience", "Experience"],
+  ["/blog", "Writing"],
+  ["/about", "About"],
+  ["/contact", "Contact"],
+];
 export default function SiteHeader() {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
+  const [open, setOpen] = useState(false);
+  const path = usePathname();
+  useEffect(() => {
+    const close = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
     };
-
-    const closeMenu = () => {
-        setIsOpen(false);
-    };
-
-    return (
-        <header className="backdrop-blur-sm sticky top-0 z-20 w-full border-b border-white/8 bg-black/30 site-header-compact">
-            <div className="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6">
-                <div className="flex items-center gap-4 min-w-0">
-                    <Link
-                        href="/"
-                        className="text-base sm:text-lg font-bold tracking-tight text-zinc-50 accent-underline accent-text micro-anim truncate"
-                        onClick={closeMenu}
-                    >
-                        Manan Gandhi
-                    </Link>
-                </div>
-
-                <nav className="flex items-center gap-2 sm:gap-4 text-sm text-zinc-300 shrink-0">
-                    {/* Social links - responsive sizing */}
-                    <div className="ml-2 sm:ml-4 flex items-center gap-2 sm:gap-3">
-                        <a
-                            href="https://github.com/MananGandhi1810"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-button"
-                            aria-label="GitHub"
-                        >
-                            <Github className="w-4 h-4" />
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/manangandhi1810"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-button"
-                            aria-label="LinkedIn"
-                        >
-                            <Linkedin className="w-4 h-4" />
-                        </a>
-                        <a
-                            href="https://x.com/MananGandhi1810"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-button"
-                            aria-label="Twitter (X)"
-                        >
-                            <Twitter className="w-4 h-4" />
-                        </a>
-                        <a
-                            href="https://instagram.com/manan.py"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="social-button"
-                            aria-label="Instagram"
-                        >
-                            <Instagram className="w-4 h-4" />
-                        </a>
-                    </div>
-
-                    <button
-                        onClick={toggleMenu}
-                        className="p-2 social-button"
-                        aria-label="Toggle menu"
-                        aria-expanded={isOpen}
-                    >
-                        {isOpen ? (
-                            <X className="w-4 h-4" />
-                        ) : (
-                            <Menu className="w-4 h-4" />
-                        )}
-                    </button>
-                </nav>
-            </div>
-
-            {/* Menu - shown when hamburger is clicked */}
-            {isOpen && (
-                <div>
-                    <div className="mx-auto max-w-6xl px-4 py-3 flex justify-center flex-col sm:flex-row gap-2">
-                        <Button
-                            href="/"
-                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
-                            onClick={closeMenu}
-                        >
-                            Home
-                        </Button>
-                        <Button
-                            href="/experience"
-                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
-                            onClick={closeMenu}
-                        >
-                            Experience
-                        </Button>
-                        <Button
-                            href="/projects"
-                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
-                            onClick={closeMenu}
-                        >
-                            Projects
-                        </Button>
-                        <Button
-                            href="/blog"
-                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
-                            onClick={closeMenu}
-                        >
-                            Blog
-                        </Button>
-                        <Button
-                            href="/about"
-                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
-                            onClick={closeMenu}
-                        >
-                            About
-                        </Button>
-                        <Button
-                            href="/contact"
-                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
-                            onClick={closeMenu}
-                        >
-                            Contact
-                        </Button>
-                        <Button
-                            target="_blank"
-                            href="/Manan_Gandhi_Resume.pdf"
-                            className="border-white/60 border block px-3 py-2 rounded-none hover:underline underline-offset-2 transition-colors text-zinc-300 hover:text-zinc-100"
-                            onClick={closeMenu}
-                        >
-                            Resume
-                        </Button>
-                    </div>
-                </div>
-            )}
-        </header>
-    );
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
+  return (
+    <header className="site-nav">
+      <div className="nav-inner">
+        <Link href="/" className="wordmark" onClick={() => setOpen(false)}>
+          <span className="accent-text">~/</span> manan
+          <span className="wordmark-dot">.</span>
+        </Link>
+        <nav className="desktop-nav" aria-label="Main navigation">
+          {links.map(([href, label]) => (
+            <Link
+              key={href}
+              href={href}
+              aria-current={path === href ? "page" : undefined}
+              className={path === href ? "active" : ""}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+        <div className="nav-actions">
+          <a
+            href="https://github.com/MananGandhi1810"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
+            <Github size={18} />
+          </a>
+          <Link
+            href="/Manan_Gandhi_Resume.pdf"
+            target="_blank"
+            className="resume-link"
+          >
+            Resume <ArrowUpRight size={14} />
+          </Link>
+          <button
+            className="menu-toggle"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+      </div>
+      {open && (
+        <nav
+          id="mobile-nav"
+          className="mobile-nav"
+          aria-label="Mobile navigation"
+        >
+          {links.map(([href, label]) => (
+            <Link
+              href={href}
+              key={href}
+              aria-current={path === href ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+      )}
+    </header>
+  );
 }

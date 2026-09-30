@@ -7,8 +7,8 @@ A modern, responsive personal portfolio website built with Next.js, showcasing p
 ## Features
 
 -   **Responsive Design**: Optimized for all device sizes
--   **Dark Theme**: Clean, modern dark UI with subtle animations
--   **Project Showcase**: Highlighted projects with descriptions and links
+-   **Dark Theme**: Terminal-inspired layout, ASCII artwork, and a blue accent
+-   **Project Showcase**: Searchable project archive with technology and category filters
 -   **Blog Section**: Space for sharing thoughts and technical articles
 -   **About Page**: Personal introduction and social links
 -   **Easter Egg**: Hidden interactive feature for fun
@@ -28,7 +28,7 @@ A modern, responsive personal portfolio website built with Next.js, showcasing p
 
 ## Prerequisites
 
--   Node.js 18+
+-   Node.js 20.9+
 -   pnpm (recommended) or npm/yarn
 
 ## Local Development
@@ -59,3 +59,9 @@ A modern, responsive personal portfolio website built with Next.js, showcasing p
 4. **Open your browser**
 
     Navigate to [http://localhost:3000](http://localhost:3000) to view the website.
+
+## Content sources
+
+The introduction and skills are based on [Manan’s GitHub profile](https://github.com/MananGandhi1810). Project descriptions and experience retain the owner-provided repository content. LinkedIn and some project websites were unavailable during research; no new claims were inferred from them.
+
+The contact form requires `RESEND_API_KEY` and `RESEND_FROM_EMAIL`. Without these, the website still builds and the form returns an unavailable response; visitors can email `hello@manan.cloud`. GitHub contribution activity uses an external service and falls back to a profile link if it is unavailable.

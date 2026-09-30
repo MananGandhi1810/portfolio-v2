@@ -1,28 +1,33 @@
+import Link from "next/link";
 export default function Footer() {
-    return (
-        <footer className="mt-16 w-full border-t border-white/8 pt-8 pb-12 text-center text-xs sm:text-sm text-white/50">
-            <p>
-                Made with <span className="text-red-400">♥</span> by{" "}
-                <a
-                    href="https://manan.cloud"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium hover:text-white duration-200 transition underline underline-offset-2"
-                >
-                    Manan Gandhi
-                </a>
-            </p>
-            <p className="mt-2">
-                Source code on{" "}
-                <a
-                    href="https://github.com/MananGandhi1810/portfolio-v2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-medium hover:text-white duration-200 transition underline underline-offset-2"
-                >
-                    GitHub
-                </a>
-            </p>
-        </footer>
-    );
+  return (
+    <footer className="site-footer">
+      <div>
+        <Link href="/" className="wordmark">
+          <span className="accent-text">~/</span> manan.
+        </Link>
+        <p>Built with curiosity. Shared with the world.</p>
+      </div>
+      <div className="footer-links">
+        <a href="mailto:hello@manan.cloud">Email ↗</a>
+        <a
+          href="https://www.linkedin.com/in/manangandhi1810"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn ↗
+        </a>
+        <a
+          href="https://github.com/MananGandhi1810/portfolio-v2"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View source ↗
+        </a>
+      </div>
+      <span className="tiny-label">
+        © {new Date().getFullYear()} MANAN GANDHI
+      </span>
+    </footer>
+  );
 }
