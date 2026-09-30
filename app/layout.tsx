@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "../components/SiteHeader";
+import RouteLoadingBoundary from "@/components/RouteLoadingBoundary";
 import Footer from "@/components/Footer";
 import EasterEgg from "@/components/EasterEgg";
 import MouseFollowerDot from "@/components/MouseFollowerDot";
@@ -33,7 +34,7 @@ export default function RootLayout({
             <body className={`dark ${monoFont.variable} antialiased`}>
                 <div className="relative z-10 min-h-screen">
                     <SiteHeader />
-                    {children}
+                    <RouteLoadingBoundary>{children}</RouteLoadingBoundary>
                     <Footer />
                 </div>
                 <MouseFollowerDot />

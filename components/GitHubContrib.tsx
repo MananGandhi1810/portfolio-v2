@@ -26,21 +26,35 @@ export default function GitHubContrib({
     const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
+        const controller = new AbortController();
+        let active = true;
+        let timer: ReturnType<typeof setTimeout>;
+        const minimumDuration = new Promise<void>((resolve) => {
+            timer = setTimeout(resolve, 2000);
+        });
         const fetchContributions = async () => {
             try {
                 const response = await fetch(
                     `https://github-contributions-api.jogruber.de/v4/${username}?y=last`,
+                    { signal: controller.signal },
                 );
+                if (!response.ok) throw new Error("GitHub activity request failed");
                 const data: GitHubContribResponse = await response.json();
-                setContributions(data.contributions);
+                if (active) setContributions(data.contributions);
             } catch (error) {
-                console.error("Failed to fetch contributions:", error);
+                if (active) console.error("Failed to fetch contributions:", error);
             } finally {
-                setLoading(false);
+                await minimumDuration;
+                if (active) setLoading(false);
             }
         };
 
         fetchContributions();
+        return () => {
+            active = false;
+            controller.abort();
+            clearTimeout(timer);
+        };
     }, [username]);
 
     useEffect(() => {
@@ -48,7 +62,7 @@ export default function GitHubContrib({
             scrollContainerRef.current.scrollLeft =
                 scrollContainerRef.current.scrollWidth;
         }
-    }, [contributions]);
+    }, [contributions, loading]);
 
     const getLevelColor = (level: number) => {
         switch (level) {
