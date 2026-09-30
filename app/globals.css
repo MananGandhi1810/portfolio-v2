@@ -357,6 +357,41 @@ body {
     }
 }
 
+.ascii-name {
+    position: relative;
+    container-type: inline-size;
+    width: 100%;
+}
+
+.ascii-name pre {
+    margin: 0;
+    font-family: inherit;
+    font-size: clamp(7px, 3.2cqi, 17px);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.04em;
+    white-space: pre;
+}
+
+.ascii-name-base {
+    color: #52525b;
+}
+
+.ascii-name-face {
+    position: absolute;
+    inset: 0;
+    color: var(--fg-100);
+}
+
+.ascii-name-cursor:not([hidden]) {
+    display: inline-block;
+    width: 0.6em;
+    height: 1em;
+    background: var(--accent);
+    vertical-align: text-bottom;
+    animation: caret-blink 400ms steps(2, start) infinite;
+}
+
 .terminal .caret {
     display: inline-block;
     width: 8px;

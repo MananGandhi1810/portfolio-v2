@@ -8,6 +8,7 @@ import { projects } from "../data/projects";
 import Card from "@/components/ui/Card";
 import Link from "next/link";
 import { useState } from "react";
+import AsciiName from "../components/AsciiName";
 
 export default function Home() {
     const [copied, setCopied] = useState(false);
@@ -33,10 +34,15 @@ export default function Home() {
                                     className="object-cover w-full h-full"
                                 />
                             </div>
-                            <div className="w-full sm:w-auto">
-                                <h1 className="text-3xl sm:text-4xl font-bold text-zinc-50 tracking-tight">
+                            <div className="w-full min-w-0 sm:flex-1">
+                                <h1 className="sr-only">
                                     Hi, I&apos;m Manan Gandhi
                                 </h1>
+                                <p aria-hidden="true" className="mb-3 text-sm text-zinc-400">
+                                    Hi, I&apos;m
+                                </p>
+                                <AsciiName />
+                                <p aria-hidden="true" className="mt-2 text-sm text-zinc-300">Manan Gandhi</p>
                                 <p className="text-xs sm:text-sm text-zinc-400 mt-2">
                                     19 · Mid Frequency Trading Intern @ IkiQuant
                                     Technologies · FOSS Enthusiast
@@ -45,13 +51,13 @@ export default function Home() {
                         </div>
 
                         <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed">
-                            I'm a 19-year-old computer engineering student at
-                            NMIMS MPSTME. I like to code and build projects. I'm
+                            I&apos;m a 19-year-old computer engineering student at
+                            NMIMS MPSTME. I like to code and build projects. I&apos;m
                             experienced in App Development, Backend Development,
                             Cybersecurity, and AI/ML. I am currently working as
                             a Mid Frequency Trading Intern at IkiQuant
                             Technologies. I love participating in hackathons,
-                            and have won 7 hackathons (yet). I'm a FOSS
+                            and have won 7 hackathons (yet). I&apos;m a FOSS
                             enthusiast, and I love building and contributing to
                             open-source projects. I also enjoy finding bugs and
                             security vulnerabilities in applications and
