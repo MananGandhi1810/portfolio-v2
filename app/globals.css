@@ -369,12 +369,14 @@ body {
     position: relative;
     container-type: inline-size;
     width: 100%;
+    max-width: 360px;
 }
 
 .ascii-name pre {
     margin: 0;
     font-family: "Hero ASCII", monospace;
-    font-size: min(3.2cqi, 17px);
+    font-size: min(3cqi, 12px);
+    font-size: round(down, min(3.4cqi, 12px), 1px);
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: 0;

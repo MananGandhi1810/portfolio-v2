@@ -21,16 +21,16 @@ export default function Home() {
 
     return (
         <main className="mx-auto my-4 max-w-5xl px-6">
-            <Card className="border border-white p-8 fade-in-up card-elevated">
+            <Card className="border border-white p-5 sm:p-8 fade-in-up card-elevated">
                 <div className="flex flex-col gap-6 sm:items-start sm:justify-between">
                     <div className="w-full">
-                        <div className="flex gap-6 flex-col sm:flex-row items-center">
-                            <div className="w-3/5 sm:w-20 aspect-square overflow-hidden ring-1 ring-white/10 shrink-0">
+                        <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+                            <div className="w-20 sm:w-28 aspect-square overflow-hidden ring-1 ring-white/10 shrink-0">
                                 <Image
                                     src="/manangandhi.png"
                                     alt="Manan Gandhi"
-                                    width={80}
-                                    height={80}
+                                    width={112}
+                                    height={112}
                                     className="object-cover w-full h-full"
                                 />
                             </div>
@@ -38,12 +38,12 @@ export default function Home() {
                                 <h1 className="sr-only">
                                     Hi, I&apos;m Manan Gandhi
                                 </h1>
-                                <p aria-hidden="true" className="mb-3 text-sm text-zinc-400">
+                                <p aria-hidden="true" className="mb-2 text-xs text-zinc-400">
                                     Hi, I&apos;m
                                 </p>
                                 <AsciiName />
-                                <p aria-hidden="true" className="mt-2 text-sm text-zinc-300">Manan Gandhi</p>
-                                <p className="text-xs sm:text-sm text-zinc-400 mt-2">
+                                <p aria-hidden="true" className="mt-2 text-sm tracking-[0.3em] text-zinc-200">GANDHI</p>
+                                <p className="text-xs sm:text-sm text-zinc-400 mt-4 max-w-xl leading-relaxed">
                                     19 · Mid Frequency Trading Intern @ IkiQuant
                                     Technologies · FOSS Enthusiast
                                 </p>
@@ -64,16 +64,16 @@ export default function Home() {
                             websites.
                         </p>
 
-                        <div className="mt-8 flex gap-2 flex-col sm:flex-row justify-center">
+                        <div className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-5">
                             <Button href="/experience">
-                                My Work Experience
+                                Experience
                             </Button>
-                            <Button href="/projects">See My Projects</Button>
-                            <Button href="/blog">Read My Blog</Button>
+                            <Button href="/projects">Projects</Button>
+                            <Button href="/blog">Blog</Button>
                             <Button href="/resume" target="_blank">
-                                See My Resume
+                                Resume
                             </Button>
-                            <Button href="/contact">Contact Me</Button>
+                            <Button href="/contact">Contact</Button>
                         </div>
                     </div>
 
