@@ -47,7 +47,7 @@ export default function AboutPage() {
                 </h1>
             </div>
             <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
-                I'm a 19-year-old computer engineering student at NMIMS MPSTME.
+                I'm a 20-year-old computer engineering student at NMIMS MPSTME.
                 I like to code and build software. I am currently working as a
                 Mid Frequency Trading Intern at IkiQuant Technologies. I'm
                 experienced in App Development, Backend Development,

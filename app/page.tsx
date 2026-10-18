@@ -45,7 +45,7 @@ export default function Home() {
                         </div>
 
                         <p className="mt-6 text-sm sm:text-base text-zinc-300 leading-relaxed">
-                            I'm a 19-year-old computer engineering student at
+                            I'm a 20-year-old computer engineering student at
                             NMIMS MPSTME. I like to code and build projects. I'm
                             experienced in App Development, Backend Development,
                             Cybersecurity, and AI/ML. I am currently working as
