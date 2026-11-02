@@ -52,7 +52,7 @@ export default function AboutPage() {
                 Mid Frequency Trading Intern at IkiQuant Technologies. I'm
                 experienced in App Development, Backend Development,
                 Cybersecurity, and AI/ML. I love participating in hackathons,
-                and have won 7 hackathons (yet). I'm a FOSS enthusiast, and I
+                and have won 8 hackathons (yet). I'm a FOSS enthusiast, and I
                 like building and contributing to open-source projects. I also
                 enjoy finding bugs and security vulnerabilities in applications
                 and websites.
