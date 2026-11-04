@@ -38,8 +38,8 @@ export default function Home() {
                                     Hi, I&apos;m Manan Gandhi
                                 </h1>
                                 <p className="text-xs sm:text-sm text-zinc-400 mt-2">
-                                    19 · Mid Frequency Trading Intern @ IkiQuant
-                                    Technologies · FOSS Enthusiast
+                                    20 · Mid Frequency Trading Intern @ IkiQuant
+                                    Technologies · ICPC Regionalist · FOSS Enthusiast
                                 </p>
                             </div>
                         </div>
@@ -51,7 +51,9 @@ export default function Home() {
                             Cybersecurity, and AI/ML. I am currently working as
                             a Mid Frequency Trading Intern at IkiQuant
                             Technologies. I love participating in hackathons,
-                            and have won 8 hackathons (yet). I'm a FOSS
+                            and have won 8 hackathons (yet). I occasionally indulge
+                            in competitive programming and am an ICPC
+                            regionalist. I'm a FOSS
                             enthusiast, and I love building and contributing to
                             open-source projects. I also enjoy finding bugs and
                             security vulnerabilities in applications and
