@@ -39,7 +39,7 @@ export default function Home() {
                                 </h1>
                                 <p className="text-xs sm:text-sm text-zinc-400 mt-2">
                                     20 · Mid Frequency Trading Intern @ IkiQuant
-                                    Technologies · ICPC Regionalist · FOSS Enthusiast
+                                    Technologies · 8x Hackathon Winner · ICPC Regionalist · FOSS Enthusiast
                                 </p>
                             </div>
                         </div>
